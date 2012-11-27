@@ -1,4 +1,4 @@
 awful
 =====
 
-Repo for Awful!, a native client for the SomethingAwful forums. 
+Repo for Awful!, a native Windows Phone client for the SomethingAwful forums. 
