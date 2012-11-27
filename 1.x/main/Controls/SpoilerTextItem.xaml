@@ -1,0 +1,80 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Awful.SpoilerTextItem"
+             d:DesignWidth="480"
+             d:DesignHeight="800">
+
+    <Grid x:Name="LayoutRoot"
+          Background="Transparent"
+          Margin="5,0">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="SpoilerState">
+                <VisualState x:Name="ShowSpoiler">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)"
+                                                       Storyboard.TargetName="SpoilerButton">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ContentBorder">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Visibility>Visible</Visibility>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="HideSpoiler">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)"
+                                                       Storyboard.TargetName="RichContent">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)"
+                                                       Storyboard.TargetName="SpoilerButton">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Visible</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Border x:Name="ContentBorder" d:LayoutOverrides="Height" BorderThickness="0,2" Visibility="Collapsed">
+        	<Border.BorderBrush>
+        		<SolidColorBrush Color="{Binding CurrentTheme.PostForeground, Source={StaticResource LookAndFeel}}"/>     	
+			</Border.BorderBrush>
+    		<RichTextBox x:Name="RichContent"
+    			IsReadOnly="True"
+    			HorizontalContentAlignment="Center">
+                <RichTextBox.Foreground>
+                    <SolidColorBrush Color="{Binding CurrentTheme.PostForeground, Source={StaticResource LookAndFeel}}" />
+                </RichTextBox.Foreground>
+    		</RichTextBox>
+    	</Border>
+        <Button x:Name="SpoilerButton"
+                Content="&lt;SPOILER&gt;"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                BorderThickness="0"
+                Padding="0"
+                Click="SpoilerButtonClick">
+            <Button.Foreground>
+                <SolidColorBrush Color="{Binding CurrentTheme.PostForeground, Source={StaticResource LookAndFeel}}" />
+            </Button.Foreground>
+        </Button>
+    </Grid>
+</UserControl>

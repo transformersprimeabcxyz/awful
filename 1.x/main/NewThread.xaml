@@ -1,0 +1,328 @@
+﻿<phone:PhoneApplicationPage 
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+	xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:Awful_ViewModels="clr-namespace:Awful.ViewModels" 
+	xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input"
+	xmlns:telerik1="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives"
+    xmlns:telerikCore="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Core"
+	xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+	xmlns:local="clr-namespace:Awful"
+	xmlns:Awful_SampleData="clr-namespace:Awful.SampleData"
+	mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+	x:Class="Awful.NewThread"
+	Orientation="Landscape"
+	SupportedOrientations="PortraitOrLandscape"
+    telerikCore:InteractionEffectManager.IsInteractionEnabled="True" OrientationChanged="Page_OrientationChanged"
+	>
+	
+	
+	<phone:PhoneApplicationPage.Resources>
+		<DataTemplate x:Key="ThreadIconListPicker_PopupItemTemplate">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<Border Padding="0" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Left" Width="116" Height="30" BorderThickness="1">
+					<Border.BorderBrush>
+						<SolidColorBrush Color="{StaticResource PhoneBorderColor}"/>
+					</Border.BorderBrush>
+					<ContentControl x:Name="IconImage" Content="{Binding IconUri, Converter={StaticResource ImageConverter}}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+				</Border>
+				<TextBlock Margin="{StaticResource PhoneHorizontalMargin}" TextWrapping="Wrap" Text="{Binding Title}" d:LayoutOverrides="Width, Height" Canvas.ZIndex="10" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource PhoneTextSmallStyle}" Grid.Column="1"/>
+			</Grid>
+		</DataTemplate>
+		<ItemsPanelTemplate x:Key="ThreadIconListPicker_IconLayout">
+			<telerik1:RadWrapPanel ItemHeight="32" ItemWidth="120" Margin="0" Width="360"/>
+		</ItemsPanelTemplate>
+		<DataTemplate x:Key="tagsButtonTemplate">
+			<Grid>
+				<TextBlock TextWrapping="Wrap" Text="{Binding}" d:LayoutOverrides="Width, Height" Style="{StaticResource PhoneTextTitle3Style}"/>
+			</Grid>
+		</DataTemplate>
+		<Awful_SampleData:SampleLoopingListSource x:Key="sample"/>
+		<Thickness x:Key="LayoutMargin_LandscapeLeft">0,0,3,0</Thickness>
+		<Thickness x:Key="LayoutMargin_LandscapeRight">3,0,0,0</Thickness>
+		<Thickness x:Key="LayoutMargin_PortraitUp">0,0,0,3</Thickness>
+		<Thickness x:Key="LayoutMargin_PortraitDown">0,3,0,0</Thickness>
+	</phone:PhoneApplicationPage.Resources>
+	
+	<shell:SystemTray.BackgroundColor>
+		<StaticResource ResourceKey="PhoneChromeColor"/>
+	</shell:SystemTray.BackgroundColor>
+<!--
+	 <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:SlideTransition Mode="SlideUpFadeIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+               <toolkit:SlideTransition Mode="SlideDownFadeOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+	-->
+	
+	<phone:PhoneApplicationPage.FontFamily>
+		<StaticResource ResourceKey="PhoneFontFamilyNormal"/>
+	</phone:PhoneApplicationPage.FontFamily>
+	<phone:PhoneApplicationPage.FontSize>
+		<StaticResource ResourceKey="PhoneFontSizeNormal"/>
+	</phone:PhoneApplicationPage.FontSize>
+	<phone:PhoneApplicationPage.Foreground>
+		<StaticResource ResourceKey="PhoneForegroundBrush"/>
+	</phone:PhoneApplicationPage.Foreground>
+	<phone:PhoneApplicationPage.ApplicationBar>
+		<shell:ApplicationBar>
+			<shell:ApplicationBarIconButton x:Name="SendButton" IconUri="/icons/appbar.check.rest.png" Text="post" Click="AppBarButtonClick"/>
+			<shell:ApplicationBarIconButton x:Name="PreviewButton" IconUri="/icons/appbar.feature.search.rest.png" Text="preview" Click="AppBarButtonClick"/>
+			<shell:ApplicationBarIconButton x:Name="CancelButton" IconUri="/icons/appbar.close.rest.png" Text="cancel" Click="AppBarButtonClick"/>
+		</shell:ApplicationBar>
+	</phone:PhoneApplicationPage.ApplicationBar>
+
+	<!--LayoutRoot is the root grid where all page content is placed-->
+	<Grid x:Name="LayoutRoot" Background="Transparent" Margin="{StaticResource LayoutMargin_PortraitUp}">
+		<VisualStateManager.VisualStateGroups>
+			<VisualStateGroup x:Name="ShowStates">
+				<VisualState x:Name="ShowPreview">
+					<Storyboard>
+						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ContentPanel">
+							<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+							<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+						</DoubleAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ContentPanel">
+							<DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Collapsed</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="PreviewPanel">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Collapsed</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+							<DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Visible</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+							<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Visible</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+				<VisualState x:Name="HidePreview">
+					<Storyboard>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ContentPanel">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Collapsed</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+							<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Visible</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PreviewPanel">
+							<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+							<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+						</DoubleAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="PreviewPanel">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Visible</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+							<DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Visible</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+							<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Collapsed</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+			</VisualStateGroup>
+			<VisualStateGroup x:Name="TagButtonStates">
+				<VisualStateGroup.Transitions>
+					<VisualTransition From="ShowTags" GeneratedDuration="0:0:0.3" To="HideTags">
+						<VisualTransition.GeneratedEasingFunction>
+							<CircleEase EasingMode="EaseIn"/>
+						</VisualTransition.GeneratedEasingFunction>
+					</VisualTransition>
+					<VisualTransition From="HideTags" GeneratedDuration="0:0:0.5" To="ShowTags">
+						<VisualTransition.GeneratedEasingFunction>
+							<CircleEase EasingMode="EaseOut"/>
+						</VisualTransition.GeneratedEasingFunction>
+					</VisualTransition>
+				</VisualStateGroup.Transitions>
+				<VisualState x:Name="ShowTags">
+					<Storyboard>
+						<DoubleAnimation Duration="0" To="213" Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="tagOptionsBorder" d:IsOptimized="True"/>
+					</Storyboard>
+				</VisualState>
+				<VisualState x:Name="HideTags">
+					<Storyboard>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="tagOptionsBorder" d:IsOptimized="True"/>
+					</Storyboard>
+				</VisualState>
+			</VisualStateGroup>
+		</VisualStateManager.VisualStateGroups>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		
+		<Grid.DataContext>
+			<Awful_ViewModels:ThreadRequestViewModel/>
+		</Grid.DataContext>
+		
+		<telerik1:RadBusyIndicator x:Name="NewThreadBusyIndicator"
+			Foreground="{StaticResource PhoneAccentBrush}"
+			VerticalAlignment="Top"
+			IsRunning="{Binding IsLoading}" Content="" RenderTransformOrigin="0.5,0.5" AnimationStyle="AnimationStyle3" Margin="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Canvas.ZIndex="22" >
+			<telerik1:RadBusyIndicator.RenderTransform>
+				<CompositeTransform ScaleX="0.65" ScaleY="0.65"/>
+			</telerik1:RadBusyIndicator.RenderTransform>
+		</telerik1:RadBusyIndicator>
+		
+		<!--TitlePanel contains the name of the application and page title-->
+		<StackPanel x:Name="TitlePanel" Grid.Row="0" Background="{StaticResource PhoneChromeBrush}">
+			<TextBlock x:Name="ApplicationTitle" Text="{Binding Forum.ForumName}" Style="{StaticResource PhoneTextNormalStyle}" Margin="{StaticResource PhoneTouchTargetOverhang}"/>
+			<Rectangle x:Name="topSeparator" Fill="{StaticResource PhoneBackgroundBrush}" Height="{StaticResource DefaultBorderSize}"/>
+		</StackPanel>
+
+		<Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<StackPanel x:Name="iconAndTitlePanel" Orientation="Vertical" d:LayoutOverrides="Height" d:IsLocked="True">
+				<Grid x:Name="iconPanel">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<Border x:Name="iconLabelBorder" Background="{StaticResource PhoneChromeBrush}" BorderBrush="{StaticResource PhoneBackgroundBrush}" BorderThickness="0,0,0,3">
+						<TextBlock x:Name="iconLabel" TextWrapping="Wrap" Text="icon:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="{StaticResource PhoneHorizontalMargin}" Style="{StaticResource PhoneTextTitle3Style}"/>
+					</Border>
+					<Border x:Name="iconValueBorder" Grid.Column="1" Height="Auto" Margin="0" MinHeight="44" BorderThickness="0,0,0,3" BorderBrush="{StaticResource PhoneBackgroundBrush}">
+						<telerik:RadListPicker x:Name="ThreadIconListPicker" ItemsSource="{Binding Request.Icons}" SelectedItem="{Binding Request.SelectedIcon, Mode=TwoWay}" IsEnabled="{Binding IsEnabled}" PopupItemTemplate="{StaticResource ThreadIconListPicker_PopupItemTemplate}" PopupHeader="SELECT AN ICON:" StateChanged="ThreadIconPicker_StateChanged" Style="{StaticResource RadListPickerOptionStyle}" Background="{StaticResource PhoneChromeBrush}" Foreground="{StaticResource PhoneForegroundBrush}" BorderBrush="{x:Null}" BorderThickness="0" Margin="0" VerticalAlignment="Stretch" Height="Auto"/>
+					</Border>
+				</Grid>
+				<Grid x:Name="titlePanel">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<Border x:Name="titleLabelBorder" Margin="0" d:LayoutOverrides="Height" Background="{StaticResource PhoneChromeBrush}" BorderThickness="0,0,0,3" BorderBrush="{StaticResource PhoneBackgroundBrush}">
+						<TextBlock x:Name="ThreadTitleLabel" TextWrapping="Wrap" Text="title:" Style="{StaticResource PhoneTextTitle3Style}" Margin="{StaticResource PhoneHorizontalMargin}" VerticalAlignment="Center"/>
+					</Border>
+					<Border x:Name="titleValueBorder" d:LayoutOverrides="Width, Height" Grid.Column="1" Background="{StaticResource PhoneChromeBrush}" BorderThickness="0,0,0,3" BorderBrush="{StaticResource PhoneBackgroundBrush}">
+						<TextBox x:Name="ThreadTitleText" TextWrapping="Wrap" Text="{Binding Request.Title, Mode=TwoWay}" InputScope="Text" IsEnabled="{Binding IsEnabled}" BorderThickness="0" Padding="2" Margin="-4,0,0,0" HorizontalScrollBarVisibility="Hidden" Background="{x:Null}" Foreground="{StaticResource PhoneForegroundBrush}" Style="{StaticResource defaultTextBoxStyle}">
+							<TextBox.CaretBrush>
+								<SolidColorBrush Color="{StaticResource PhoneForegroundColor}"/>
+							</TextBox.CaretBrush>
+						</TextBox>
+					</Border>
+				</Grid>
+			</StackPanel>
+			<Grid x:Name="textEditPanel" Grid.Row="1">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition/>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+				<ScrollViewer Margin="0" Background="{StaticResource PhoneChromeBrush}" d:LayoutOverrides="GridBox" Grid.ColumnSpan="2">
+					<StackPanel Orientation="Vertical">
+						<TextBox x:Name="ThreadTextBox" TextWrapping="Wrap" Text="{Binding Request.Text, Mode=TwoWay}" InputScope="Text" AcceptsReturn="True" IsEnabled="{Binding IsEnabled}" VerticalAlignment="Top" BorderThickness="0" FontSize="{StaticResource PhoneFontSizeSmall}" Background="{x:Null}" Foreground="{StaticResource PhoneForegroundBrush}" Style="{StaticResource defaultTextBoxStyle}" d:LayoutOverrides="Width">
+							<TextBox.CaretBrush>
+								<SolidColorBrush Color="{StaticResource PhoneForegroundColor}"/>
+							</TextBox.CaretBrush>
+						</TextBox>
+						<Rectangle x:Name="endReplySeparator" Fill="{StaticResource PhoneSubtleBrush}" Height="2" Margin="12,0,6,0" d:LayoutOverrides="Width"/>
+						<TextBlock x:Name="endReplyLabel" TextWrapping="Wrap" Text="end of text." VerticalAlignment="Center" HorizontalAlignment="Center" Margin="{StaticResource PhoneTouchTargetOverhang}" Foreground="{StaticResource PhoneSubtleBrush}"/>
+					</StackPanel>
+				</ScrollViewer>
+				<Border x:Name="leftButtonBorder" BorderBrush="{StaticResource PhoneBackgroundBrush}" BorderThickness="0,2,3,0" Margin="1,1,0,0" Grid.Row="1" Height="{StaticResource defaultButtonHeight}" Background="{StaticResource PhoneChromeBrush}">
+					<Button x:Name="tagsButton" Content="tags" 
+						Style="{StaticResource AccentOnClickButton}" 
+						BorderBrush="{x:Null}" 
+						BorderThickness="0" 
+						ContentTemplate="{StaticResource tagsButtonTemplate}" 
+						Click="OnButtonClick" Margin="0" Tag="TAGS"/>
+				</Border>
+				<Border x:Name="rightButtonBorder" BorderThickness="0,2,0,0" Grid.Row="1" Grid.Column="1" Height="{StaticResource defaultButtonHeight}" Background="{StaticResource PhoneChromeBrush}" BorderBrush="{StaticResource PhoneBackgroundBrush}">
+					<Button x:Name="smileyButton" Content=":-)" 
+						Style="{StaticResource AccentOnClickButton}" 
+						BorderBrush="{x:Null}" 
+						BorderThickness="0" 
+						ContentTemplate="{StaticResource tagsButtonTemplate}" 
+						Click="OnButtonClick" Margin="0,0,4,0" Tag="SMILEY"/>
+				</Border>
+				<Border x:Name="tagOptionsBorder" 
+					HorizontalAlignment="Left" 
+					Height="0" 
+					Margin="0" 
+					VerticalAlignment="Bottom" BorderThickness="0,3,3,0" BorderBrush="{StaticResource PhoneBackgroundBrush}" RenderTransformOrigin="0.5,0.5" Canvas.ZIndex="20" Background="{StaticResource PhoneChromeBrush}" >
+					<Border.RenderTransform>
+						<CompositeTransform />
+					</Border.RenderTransform>
+
+					<telerik1:RadLoopingList x:Name="tagOptions"
+						SelectedIndexChanged="OnTagOptionSelected"
+						ItemHeight="{StaticResource defaultButtonHeight}"
+						d:DataContext="{StaticResource sample}"
+						DataSource="{Binding}"
+						ItemSpacing="0"
+						ItemWidth="240"
+						RenderTransformOrigin="0.5,0.5"
+						Style="{StaticResource DefaultLoopingStyle}"
+						ItemStyle="{StaticResource loopingListItemStyle}"
+						IsCentered="True">
+						<telerik1:RadLoopingList.ItemTemplate>
+							<DataTemplate>
+								<Grid>
+									<Button Click="OnOptionsButtonClick"
+										Style="{StaticResource AccentOnClickButton}"
+										ContentTemplate="{StaticResource optionButtonTemplate}"
+										Content="{Binding}" BorderThickness="0,0,0,3" BorderBrush="{StaticResource PhoneBackgroundBrush}" 
+										HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" 
+										Padding="0" />
+								</Grid>
+							</DataTemplate>
+						</telerik1:RadLoopingList.ItemTemplate>
+					</telerik1:RadLoopingList>
+				</Border>
+			</Grid>
+		</Grid>
+		<Grid x:Name="PreviewPanel" Margin="0" Grid.Row="1" Visibility="Collapsed" d:IsLocked="True">
+			<local:VerticalThreadViewer x:Name="PreviewViewer" Margin="-12,0,0,0"/>
+		</Grid>
+		<telerik1:RadWindow x:Name="SmileyWindow" Margin="0" IsFullScreen="True">
+			<local:SmileyPanel x:Name="smileyPanel"/>
+		</telerik1:RadWindow>
+	</Grid>
+</phone:PhoneApplicationPage>

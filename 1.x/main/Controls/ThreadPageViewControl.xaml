@@ -1,0 +1,103 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:telerikCore="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Core"
+	xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives"
+	xmlns:System="clr-namespace:System;assembly=mscorlib"
+	mc:Ignorable="d"
+	x:Class="Awful.ThreadPageViewControl"
+	d:DesignWidth="480" d:DesignHeight="800">
+
+	<Grid x:Name="LayoutRoot" Background="Transparent">
+		<VisualStateManager.VisualStateGroups>
+			<VisualStateGroup x:Name="LoadingStates">
+				<VisualStateGroup.Transitions>
+					<VisualTransition From="PageLoading" GeneratedDuration="0:0:0.3" To="PageLoaded">
+						<Storyboard>
+							<DoubleAnimation BeginTime="0:0:0.2" Duration="0:0:0.4" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="pagePresenterPanel"/>
+							<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(RadBusyIndicator.IsRunning)" Storyboard.TargetName="pageLoadingIndicator">
+								<DiscreteObjectKeyFrame KeyTime="0">
+									<DiscreteObjectKeyFrame.Value>
+										<System:Boolean>False</System:Boolean>
+									</DiscreteObjectKeyFrame.Value>
+								</DiscreteObjectKeyFrame>
+							</ObjectAnimationUsingKeyFrames>
+						</Storyboard>
+					</VisualTransition>
+					<VisualTransition From="PageLoaded" GeneratedDuration="0:0:0.3" To="PageLoading">
+						<Storyboard>
+							<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(RadBusyIndicator.IsRunning)" Storyboard.TargetName="pageLoadingIndicator">
+								<DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+									<DiscreteObjectKeyFrame.Value>
+										<System:Boolean>True</System:Boolean>
+									</DiscreteObjectKeyFrame.Value>
+								</DiscreteObjectKeyFrame>
+							</ObjectAnimationUsingKeyFrames>
+						</Storyboard>
+					</VisualTransition>
+				</VisualStateGroup.Transitions>
+				<VisualState x:Name="PageLoading">
+					<Storyboard>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="pagePresenterPanel" d:IsOptimized="True"/>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(RadBusyIndicator.IsRunning)" Storyboard.TargetName="pageLoadingIndicator">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<System:Boolean>True</System:Boolean>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+				<VisualState x:Name="PageLoaded">
+					<Storyboard>
+						<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="pagePresenterPanel" d:IsOptimized="True"/>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(RadBusyIndicator.IsRunning)" Storyboard.TargetName="pageLoadingIndicator">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<System:Boolean>False</System:Boolean>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+				<VisualState x:Name="PageFailed">
+					<Storyboard>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="pagePresenterPanel" d:IsOptimized="True"/>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(RadBusyIndicator.IsRunning)" Storyboard.TargetName="pageLoadingIndicator">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<System:Boolean>False</System:Boolean>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="pageFailedLabel">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Visible</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.Text)" Storyboard.TargetName="pageFailedLabel">
+							<DiscreteObjectKeyFrame KeyTime="0" Value=":-("/>
+						</ObjectAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+			</VisualStateGroup>
+		</VisualStateManager.VisualStateGroups>
+		<Grid x:Name="pagePresenterPanel"
+			Background="Azure" 
+			HorizontalAlignment="Stretch" 
+			VerticalAlignment="Stretch" Opacity="0"/>
+		<telerikPrimitives:RadBusyIndicator x:Name="pageLoadingIndicator"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Stretch"
+			Foreground="{StaticResource PhoneAccentBrush}"/>
+		<TextBlock x:Name="pageFailedLabel" HorizontalAlignment="Center" TextWrapping="Wrap" Text=":(" VerticalAlignment="Center" Style="{StaticResource PhoneTextTitle1Style}" RenderTransformOrigin="0.5,0.5" TextAlignment="Center" Foreground="{StaticResource PhoneAccentBrush}" Visibility="Collapsed" Margin="0">
+			<TextBlock.RenderTransform>
+				<CompositeTransform ScaleX="2" ScaleY="2"/>
+			</TextBlock.RenderTransform>
+		</TextBlock>
+	</Grid>
+</UserControl>

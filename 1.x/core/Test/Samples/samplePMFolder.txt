@@ -1,0 +1,347 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>The Something Awful Forums - Private Messaging: bootleg robot</title>
+	
+	<meta name="MSSmartTagsPreventParsing" content="TRUE">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css"><![endif]-->
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="/css/ie7.css"><![endif]-->
+	<link rel="apple-touch-icon" href="http://i.somethingawful.com/core/icon/iphone-touch/forums.png">
+	<link rel="stylesheet" type="text/css" href="/css/main.css?0215">
+	<link rel="stylesheet" type="text/css" href="/css/bbcode.css?0215">
+	<link rel="stylesheet" type="text/css" href="http://www.somethingawful.com/globalcss/globalmenu.css?0215a">
+	
+
+	<!-- ts-specific includes -->
+	
+
+	
+
+	<script type="text/javascript">
+		var djConfig = { isDebug: false, debugDiv: 'copyright', parseWidgets: false, searchIds: [] }
+	</script>
+	<!-- <script src="/__utm.js" type="text/javascript"></script> -->
+	<script src="/js/dojo/dojo.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/themes/redmond/jquery-ui.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
+
+	<script src="/js/vb/misc.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var pal = new adloader();
+		dojo.addOnLoad( function() { omapalpet.add_pets('oma_pal') });
+	</script>
+	<script src="/js/vb/bookmarks.js" type="text/javascript"></script>
+	<script src="/js/vb/ratings.js" type="text/javascript"></script>
+	<script src="/js/vb/postimages2.js" type="text/javascript"></script>
+	
+    
+	
+	<script type="text/javascript">
+	<!--
+	function CheckAll() {
+		for (var i=0;i<document.form.elements.length;i++) {
+			var e = document.form.elements[i];
+			if ((e.name != 'allbox') && (e.type=='checkbox')) {
+				e.checked = document.form.allbox.checked;
+			}
+		}
+	}
+	function CheckCheckAll() {
+		var TotalBoxes = 0;
+		var TotalOn = 0;
+		for (var i=0;i<document.form.elements.length;i++) {
+			var e = document.form.elements[i];
+			if ((e.name != 'allbox') && (e.type=='checkbox')) {
+				TotalBoxes++;
+				if (e.checked) {
+					TotalOn++;
+				}
+			}
+		}
+		if (TotalBoxes==TotalOn) {
+			document.form.allbox.checked=true;
+		} else {
+			document.form.allbox.checked=false;
+		}
+	}
+	//-->
+	</script>
+	<style type="text/css">
+		.pmwarn { margin:1em; color:red; font-weight:bold; padding-left:18px; background: url('http://fi.somethingawful.com/images/warning.gif') left no-repeat; }
+		.msgbuttons { text-align:center; }
+		.msgbuttons img { border:0; }
+	</style>
+</head>
+<body id="something_awful">
+<div id="globalmenu">
+	<ul>
+		<li class="first"><a href="https://secure.somethingawful.com/">Buy Forum Stuff</a></li>
+		<li><a href="http://www.somethingawful.com/">Something Awful</a></li>
+	</ul>
+</div>
+
+
+
+<div id="container">
+
+
+
+	
+
+	<ul id="nav_purchase">
+		<li><b>Purchase:</b></li>
+		<li><a href="https://secure.somethingawful.com/products/register.php">Account</a></li>
+		<li>- <a href="https://secure.somethingawful.com/products/platinum.php">Platinum Upgrade</a></li>
+		<li>- <a href="https://secure.somethingawful.com/products/titlechange.php">New Avatar</a></li>
+		<li>- <a href="https://secure.somethingawful.com/products/titlechange.php">Other's Avatar</a></li>
+		<li>- <a href="https://secure.somethingawful.com/products/archives.php">Archives</a></li>
+		<li>- <a href="https://secure.somethingawful.com/products/noads.php">No-Ads</a></li>
+		<li>- <a href="https://secure.somethingawful.com/products/namechange.php">New Username</a></li>
+		<li>- <a href="https://secure.somethingawful.com/products/ad-banner.php">Banner Advertisement</a></li>
+		<li>- <a href="https://secure.somethingawful.com/products/smilie.php">Smilie</a></li>
+		<li>- <a href="https://secure.somethingawful.com/products/sticky-thread.php">Stick Thread</a></li>
+		<li>- <a href="https://secure.somethingawful.com/products/gift-certificate.php">Gift Cert.</a></li>
+	</ul>
+
+	<ul id="navigation">
+		<li class="first"><a href="/index.php">SA Forums</a></li>
+		<li>- <a href="/f/search">Search the Forums</a></li>
+		<li>- <a href="usercp.php">User Control Panel</a></li>
+		<li>- <a href="/private.php">Private Messages</a></li>
+		<li>- <a href="http://www.somethingawful.com/d/forum-rules/forum-rules.php">Forum Rules</a></li>
+		<li>- <a href="/dictionary.php">SAclopedia</a></li>
+		<li>- <a href="/stats.php">Posting Gloryhole</a></li>
+		<li>- <a href="/banlist.php">Leper's Colony</a></li>
+		<li>- <a href="/supportmail.php">Support</a></li>
+		<li>- <a href="/account.php?action=logout&amp;ma=f3fe9e95">Log Out</a></li>
+		
+	</ul>
+
+
+<div class="oma_pal">
+	<script type="text/javascript">pal.make_frame(47, 728, 90);</script>
+	<noscript><a href='http://tenbux.somethingawful.com/www/delivery/ck.php?n=a36feb72&amp;cb=93847473' target='_blank'><img src='http://tenbux.somethingawful.com/www/delivery/avw.php?zoneid=47&amp;cb=304736438&amp;n=a36feb72' border='0' alt='' /></a></noscript>
+</div>
+
+
+
+
+
+	<div id="content">
+
+	
+	
+
+<div class="breadcrumbs"><a href="index.php">The Something Awful Forums</a> &gt; <a href="usercp.php">User Control Panel For bootleg robot</a> &gt; <a href="private.php">Private Messages</a> &gt; two</div>
+
+
+	<ul id="usercpnav">
+		<li><a href="usercp.php">User CP Home</a></li>
+		<li><a href="member.php?action=accountfeatures">Account Features</a></li>
+		<li><a href="private.php">Private Messages</a></li>
+		<li><a href="bookmarkthreads.php">Bookmarked Threads</a></li>
+		<li><a href="member.php?action=editprofile">Edit Profile</a></li>
+		<li><a href="member.php?action=editoptions">Edit Options</a></li>
+		<li><a href="account.php?action=editpassword">Change Password</a></li>
+		<li><a href="member2.php?action=viewlist&amp;userlist=buddy">Edit Buddy List</a></li>
+		<li><a href="member2.php?action=viewlist&amp;userlist=ignore">Edit Ignore List</a></li>
+	</ul>
+	<br style="clear:both;">
+
+ 
+<form action="private.php" method="post">
+<input type="hidden" name="folderid" value="3">
+<b>Show Messages From:</b> <select name="daysprune" onchange="window.location=('private.php?folderid=3&amp;daysprune=' + this.options[this.selectedIndex].value)">
+	<option value="1" >last day</option>
+	<option value="2" >last 2 days</option>
+	<option value="5" >last 5 days</option>
+	<option value="10" >last 10 days</option>
+	<option value="20" >last 20 days</option>
+	<option value="30" >last 30 days</option>
+	<option value="45" >last 45 days</option>
+	<option value="60" >last 60 days</option>
+	<option value="75" >last 75 days</option>
+	<option value="100" >last 100 days</option>
+	<option value="365" >the last year</option>
+	<option value="9999" selected>the beginning</option>
+</select><input type="image" src="http://fi.somethingawful.com/images/go.gif">
+</form>
+
+<form action="private.php" method="post">
+	<b>Jump to folder:</b>
+	<select name="folderid" onchange="window.location=('private.php?folderid=' + this.options[this.selectedIndex].value + '&amp;daysprune=9999')">
+	<option value="0" >Inbox</option>
+	<option value="-1" >Sent Items</option>
+	<option value="1" >one</option><option value="2" >two</option><option value="3" selected>three</option><option value="4" >four</option>
+	
+	</select><input type="image" src="http://fi.somethingawful.com/images/go.gif">
+</form>
+
+
+
+<form action="private.php" method="post" name="form">
+	<table class="standard full">
+		<tr class="small">
+			<th colspan="3">Message Title</th>
+			<th nowrap style="text-align:right;">Sender</th>
+			<th nowrap>Date / Time Sent</th>
+			<th nowrap><input name="allbox" type="checkbox" value="Check All" title="Select/Deselect All" onClick="CheckAll();"></th>
+		</tr>
+
+		
+		<tr>
+			<td><img src="http://fi.somethingawful.com/images/pmforwarded.gif" alt=""></td>
+			<td class="altcolor2"><img src="http://fi.somethingawful.com/forums/posticons/icons-08/news.png" alt="News item" border="0"></td>
+			<td align="left" width="75%"><a href="private.php?action=show&amp;privatemessageid=4345413">HELLO</a>
+			</td>
+			<td width="25%" class="altcolor2" style="text-align:right;">Tivac</td>
+			<td align="right" nowrap class="smalldate">Apr 22, 2012 at 23:28</td>
+			<td class="altcolor2"><input type="checkbox" name="privatemessage[4345413]" value="yes"></td>
+		</tr>
+		<tr>
+			<td><img src="http://fi.somethingawful.com/images/pmreplied.gif" alt=""></td>
+			<td class="altcolor2"><img src="http://fi.somethingawful.com/forums/posticons/icons-08/cars.png" alt="Cars" border="0"></td>
+			<td align="left" width="75%"><a href="private.php?action=show&amp;privatemessageid=4345297">Sample PM</a>
+			</td>
+			<td width="25%" class="altcolor2" style="text-align:right;">Dead Man Posting</td>
+			<td align="right" nowrap class="smalldate">Apr 22, 2012 at 21:44</td>
+			<td class="altcolor2"><input type="checkbox" name="privatemessage[4345297]" value="yes"></td>
+		</tr>
+		<tr>
+			<td><img src="http://fi.somethingawful.com/images/pmreplied.gif" alt=""></td>
+			<td class="altcolor2"><img src="http://fi.somethingawful.com/forums/posticons/icons-08/goonmeet.png" alt="Goon Meet" border="0"></td>
+			<td align="left" width="75%"><a href="private.php?action=show&amp;privatemessageid=4345042">This is a test PM</a>
+			</td>
+			<td width="25%" class="altcolor2" style="text-align:right;">Naffer</td>
+			<td align="right" nowrap class="smalldate">Apr 22, 2012 at 16:10</td>
+			<td class="altcolor2"><input type="checkbox" name="privatemessage[4345042]" value="yes"></td>
+		</tr>
+		<tr>
+			<td align="right" colspan="7"><b>
+				<input type="hidden" name="action" value="dostuff">
+				<input type="hidden" name="thisfolder" value="3">
+				Selected messages: <select name="folderid"><option value="0">Inbox</option><option value="1" >one</option><option value="2" >two</option><option value="3" selected>three</option><option value="4" >four</option></select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="submit" class="bginput" name="move" value="Move" style="background-color:CCCCCC;color:000000;font-size:10px">&nbsp;&nbsp;&nbsp;
+				
+				&nbsp;&nbsp;&nbsp;<input type="submit" class="bginput" name="delete" value="Delete" style="background-color:CCCCCC;color:000000;font-size:10px">
+				</b>
+			</td>
+		</tr>
+	</table>
+</form>
+
+<br>
+
+<!-- message buttons -->
+<div class="msgbuttons">
+	<a href="private.php?action=newmessage"><img src="http://fi.somethingawful.com/images/pm/newmessage.gif" alt="Send a new private message"></a>
+	
+	
+	<a href="private.php?action=editfolders"><img src="http://fi.somethingawful.com/images/pm/folders.gif" alt="Organize your private message folders"></a>
+</div>
+
+<br>
+
+
+<form action="forumdisplay.php" method="get">
+<input type="hidden" name="s" value="">
+<input type="hidden" name="daysprune" value="">
+<select name="forumid"
+onchange="window.location=('forumdisplay.php?daysprune=&amp;forumid='+this.options[this.selectedIndex].value)">
+<option value="-1" selected>Please select one:</option>
+<option value="-1">--------------------</option>
+<option value="pm" >Private Messages</option>
+<option value="cp" >User Control Panel</option>
+<option value="search" >Search Forums</option>
+<option value="home" >Forums Home</option>
+<option value="lc" >Leper's Colony</option>
+<option value="-1">--------------------</option>
+<option value="48" > Main</option><option value="1" >-- General Bullshit</option><option value="155" >---- SA's Front Page Discussion</option><option value="214" >---- E/N Bullshit</option><option value="26" >-- FYAD: Good Shit OP</option><option value="154" >---- Twisty</option><option value="51" > Discussion</option><option value="44" >-- Games</option><option value="145" >---- The MMO HMO</option><option value="146" >------ WoW: Goon Squad</option><option value="250" >------ The StarCraft II Zealot Zone</option><option value="256" >---- 3rd Street Skyrims: Elder Saints The Fifth</option><option value="93" >---- Private Game Servers</option><option value="234" >---- Traditional Games</option><option value="103" >------ Play by Post</option><option value="191" >---- Let's Play!</option><option value="192" >-- Inspect Your Gadgets</option><option value="190" >---- The A/V Arena</option><option value="158" >-- Ask / Tell</option><option value="211" >---- Tourism &amp; Travel</option><option value="200" >---- Business, Finance, and Careers</option><option value="46" >-- Debate &amp; Discussion</option><option value="162" >---- Science, Academics and Languages</option><option value="22" >-- Serious Hardware / Software Crap</option><option value="170" >---- Haus of Tech Support</option><option value="202" >---- The Cavern of COBOL</option><option value="219" >---- YOSPOS</option><option value="122" >-- Sports Argument Stadium* </option><option value="181" >---- The Football Funhouse</option><option value="248" >---- The Armchair Quarterback</option><option value="175" >---- The Ray Parlour</option><option value="177" >---- Punchsport Pagoda</option><option value="139" >---- Poker in the Rear</option><option value="179" >-- Watch and Weight</option><option value="183" >---- The Goon Doctor</option><option value="244" >---- The Fitness Log Cabin</option><option value="242" >-- Paranormal/Conspiracy Forum</option><option value="161" >-- Goons With Spoons</option><option value="167" >-- Post Your Favorite (or Request)</option><option value="91" >-- Automotive Insanity</option><option value="236" >---- Cycle Asylum</option><option value="124" >-- Pet Island</option><option value="132" >-- The Firing Range</option><option value="90" >-- The Crackhead Clubhouse</option><option value="218" >-- Goons in Platoons</option><option value="152" > The Finer Arts</option><option value="31" >-- Creative Convention</option><option value="210" >---- DIY &amp; Hobbies</option><option value="247" >---- The Dorkroom</option><option value="151" >-- Cinema Discusso</option><option value="133" >---- The Film Dump</option><option value="182" >-- The Book Barn</option><option value="150" >-- No Music Discussion</option><option value="104" >---- Musician's Lounge</option><option value="130" >-- The TV IV</option><option value="144" >-- Batman's Shameful Secret</option><option value="27" >-- ADTRW</option><option value="215" >-- Entertainment, Weakly</option><option value="255" >-- Rapidly Going Deaf</option><option value="153" > The Community</option><option value="61" >-- SA-Mart</option><option value="77" >---- Feedback &amp; Discussion</option><option value="85" >---- Coupons &amp; Deals</option><option value="43" >-- Goon Meets</option><option value="241" >-- LAN: Your City Sucks - Regional Discussion</option><option value="188" >-- Questions, Comments, Suggestions? - Read the stickies first!</option><option value="251" >-- Retarded Forum for Assholes</option><option value="186" >---- Your Console Sucks</option><option value="201" >---- Laissez's Faire</option><option value="49" > Archives</option><option value="21" >-- Comedy Goldmine</option><option value="115" >---- FYAD Goldmine</option><option value="222" >---- LF Goldmine</option><option value="229" >---- YCS Goldmine</option><option value="25" >-- Comedy Gas Chamber</option><option value="204" >-- Helldump Success Stories</option>
+</select>
+<input type="image" src="http://fi.somethingawful.com/images/go.gif">
+</form>
+
+<br>
+
+<!-- icon key -->
+<table>
+<tr>
+	<td rowspan="3" width="50%">&nbsp;</td>
+	<td colspan="6" align="center">
+		<b>Message quota for all folders: 500</b>
+	</td>
+	<td rowspan="3" width="50%">&nbsp;</td></tr>
+</tr>
+<tr>
+	<td nowrap><img src="http://fi.somethingawful.com/images/newpm.gif" alt="Unread Message"></td>
+	<td nowrap><b>Unread Message</b></td>
+	<td nowrap><img src="http://fi.somethingawful.com/images/pm.gif" border=0 alt="Message"></td>
+	<td nowrap><b>Message</b></td>
+	<td nowrap><img src="http://fi.somethingawful.com/images/trashcan.gif" alt="Cancelled Message"></td>
+	<td nowrap><b>Cancelled Message</b></td>
+<tr>
+	<td nowrap><img src="http://fi.somethingawful.com/images/pmreplied.gif" alt="Replied to Message"></td>
+	<td nowrap><b>Replied to Message</b></td>
+	<td nowrap><img src="http://fi.somethingawful.com/images/pmforwarded.gif" alt="Forwarded Message"></td>
+	<td nowrap colspan="3"><b>Forwarded Message</b></td>
+</tr>
+</table>
+<!-- icon key -->
+
+</div><!-- #content -->
+
+	<div id="copyright">
+		Powered by: vBulletin Version 2.2.9 (<a href="/CHANGES">SAVB-2.0.15</a>)<br>
+		Copyright &copy;2000, 2001, Jelsoft Enterprises Limited.<br>
+		Copyright &copy;2011, Something Awful LLC<br>
+	</div>
+
+</div><!-- #container -->
+
+<script type="text/javascript">
+	// quantcast
+	_qoptions = { qacct:"p-82vTvmw-enlng" };
+
+	try {
+		if(document.location.hostname != 'forums.somethingawful.com')
+			throw undefined;
+
+		$(document).ready(function() {
+			var qcUrl = 'http://edge.quantserve.com/quant.js';
+			jQuery.getScript(qcUrl);
+
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			var gaUrl = gaJsHost + 'google-analytics.com/ga.js';
+			jQuery.getScript(gaUrl, function() {
+				var pageTracker = _gat._getTracker("UA-3064978-2");
+				pageTracker._initData();
+				pageTracker._trackPageview();
+			});
+		});
+	} catch(e) {};
+
+	// indie
+	try {
+		if(document.location.hostname != 'forums.somethingawful.com')
+			throw undefined;
+
+		$(document).ready(function() {
+			var ic_element = document.createElement('script');
+			ic_element.type = 'text/javascript';
+			ic_element.async = true;
+			ic_element.id = 'ic_annonymous_pixel';
+			ic_element.src = 'http://pixel.indieclick.com/annonymous/domain/somethingawful.com/reach/script_ic.js';
+			var ic_script = document.getElementsByTagName('script')[0];
+			ic_script.parentNode.insertBefore(ic_element, ic_script);
+		});
+	} catch(e) {};
+</script>
+<noscript><img src="http://pixel.quantserve.com/pixel/p-82vTvmw-enlng.gif" style="display:none;" border="0" height="1" width="1" alt="Quantcast"></noscript>
+
+<!-- PLEASE DO NOT REMOVE -->
+<ol id="debug" style="display:none"><li>&nbsp;</ol>
+
+</body>
+</html>

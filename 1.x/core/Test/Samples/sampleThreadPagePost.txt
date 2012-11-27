@@ -1,0 +1,53 @@
+﻿<table class="post" id="post403116365">
+<tr  class="seen2" id="pti1">
+	<td class="userinfo userid-101109">
+		<dl class="userinfo">
+			<dt class="author" title="">I</dt>
+			<dd class="registered">Aug 04, 2006</dd>
+			<dd class="title">
+				<div class="bbc-center"><img src="http://fi.somethingawful.com/safs/titles/76/ac/00101109.0001.png" alt="" class="img" border="0"><br />
+He spends most of his spare time lurking outside her window.</div><br>
+				<br class="pb">
+			</dd>
+		</dl>
+	</td>
+	<td class="postbody">
+		<!-- BeginContentMarker -->
+		<!-- google_ad_section_start -->
+		<div class="bbc-block"><h4>uG posted:</h4><blockquote>
+So much for root members having a seal preventing them from talking about Danzou...<br />
+</blockquote></div>
+
+Orichimaru can just grow a new tongue. I don't know about Kabuto, though.
+		<!-- google_ad_section_end -->
+		<!-- EndContentMarker -->
+
+
+		<p class="editedby">
+	</td>
+</tr>
+<tr class="seen2">
+	<td class="postdate">
+		<a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3321" title="Mark thread seen up to this post"><img src="http://fi.somethingawful.com/style/posticon-seen.gif" alt="" border="0"></a>
+		<a href="#post403116365">#</a>
+		<a href="/showthread.php?threadid=3415929&amp;userid=101109">?</a>
+		Apr 28, 2012 22:37
+	</td>
+	<td class="postlinks">
+		<ul class="profilelinks">
+			<li><a href="member.php?action=getinfo&amp;userid=101109">Profile</a></li>
+			<li><a href="private.php?action=newmessage&amp;userid=101109">Message</a></li>
+			<li><a href="search.php?action=do_search_posthistory&amp;userid=101109">Post History</a></li>
+		</ul>
+		<ul class="postbuttons">
+
+			
+			<li class="alertbutton"><a href="modalert.php?postid=403116365&amp;username=I"><img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators"></a>&nbsp;&nbsp;</li>
+			
+			<li><a href="newreply.php?action=newreply&amp;postid=403116365"><img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title=""></a></li>
+
+
+		</ul>
+	</td>
+</tr>
+</table>

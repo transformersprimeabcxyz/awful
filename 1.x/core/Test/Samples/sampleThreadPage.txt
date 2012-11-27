@@ -1,0 +1,1622 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <title>Naruto Manga Thread 16: You won't defeat me by becoming Dr. Snakes. - The Something Awful Forums</title>
+
+    <meta name="MSSmartTagsPreventParsing" content="TRUE">
+      <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css"><![endif]-->
+        <!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="/css/ie7.css"><![endif]-->
+        <link rel="apple-touch-icon" href="http://i.somethingawful.com/core/icon/iphone-touch/forums.png">
+          <link rel="stylesheet" type="text/css" href="/css/main.css?0215">
+            <link rel="stylesheet" type="text/css" href="/css/bbcode.css?0215">
+              <link rel="stylesheet" type="text/css" href="http://www.somethingawful.com/globalcss/globalmenu.css?0215a">
+
+
+                <!-- ts-specific includes -->
+
+
+
+
+                <script type="text/javascript">
+                  var djConfig = { isDebug: false, debugDiv: 'copyright', parseWidgets: false, searchIds: [] }
+                </script>
+                <!-- <script src="/__utm.js" type="text/javascript"></script> -->
+                <script src="/js/dojo/dojo.js" type="text/javascript"></script>
+                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/themes/redmond/jquery-ui.css">
+                  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
+
+                  <script src="/js/vb/misc.js" type="text/javascript"></script>
+                  <script type="text/javascript">
+                    var pal = new adloader();
+                    dojo.addOnLoad( function() { omapalpet.add_pets('oma_pal') });
+                  </script>
+                  <script src="/js/vb/bookmarks.js" type="text/javascript"></script>
+                  <script src="/js/vb/ratings.js" type="text/javascript"></script>
+                  <script src="/js/vb/postimages2.js" type="text/javascript"></script>
+
+
+
+                  <meta name="Description" content="Naruto Manga Thread 16: You won't defeat me by becoming Dr. Snakes.">
+                    <script type="text/javascript">
+                      dojo.addOnLoad(function() {
+                      if(bmbutton = dojo.byId('button_bookmark'))
+                      bookmark_button.init(bmbutton, 3415929);
+                      });
+                    </script>
+
+
+
+
+
+
+                  </head>
+  <body id="something_awful">
+
+    <div id="top"></div>
+
+    <div id="globalmenu">
+      <ul>
+        <li class="first">
+          <a href="https://secure.somethingawful.com/">Buy Forum Stuff</a>
+        </li>
+        <li>
+          <a href="http://www.somethingawful.com/">Something Awful</a>
+        </li>
+      </ul>
+    </div>
+
+
+
+    <div id="container">
+
+
+
+
+
+      <ul id="nav_purchase">
+        <li>
+          <b>Purchase:</b>
+        </li>
+        <li>
+          <a href="https://secure.somethingawful.com/products/register.php">Account</a>
+        </li>
+        <li>
+          - <a href="https://secure.somethingawful.com/products/platinum.php">Platinum Upgrade</a>
+        </li>
+        <li>
+          - <a href="https://secure.somethingawful.com/products/titlechange.php">New Avatar</a>
+        </li>
+        <li>
+          - <a href="https://secure.somethingawful.com/products/titlechange.php">Other's Avatar</a>
+        </li>
+        <li>
+          - <a href="https://secure.somethingawful.com/products/archives.php">Archives</a>
+        </li>
+        <li>
+          - <a href="https://secure.somethingawful.com/products/noads.php">No-Ads</a>
+        </li>
+        <li>
+          - <a href="https://secure.somethingawful.com/products/namechange.php">New Username</a>
+        </li>
+        <li>
+          - <a href="https://secure.somethingawful.com/products/ad-banner.php">Banner Advertisement</a>
+        </li>
+        <li>
+          - <a href="https://secure.somethingawful.com/products/smilie.php">Smilie</a>
+        </li>
+        <li>
+          - <a href="https://secure.somethingawful.com/products/sticky-thread.php">Stick Thread</a>
+        </li>
+        <li>
+          - <a href="https://secure.somethingawful.com/products/gift-certificate.php">Gift Cert.</a>
+        </li>
+      </ul>
+
+      <ul id="navigation">
+        <li class="first">
+          <a href="/index.php">SA Forums</a>
+        </li>
+        <li>
+          - <a href="/f/search">Search the Forums</a>
+        </li>
+        <li>
+          - <a href="usercp.php">User Control Panel</a>
+        </li>
+        <li>
+          - <a href="/private.php">Private Messages</a>
+        </li>
+        <li>
+          - <a href="http://www.somethingawful.com/d/forum-rules/forum-rules.php">Forum Rules</a>
+        </li>
+        <li>
+          - <a href="/dictionary.php">SAclopedia</a>
+        </li>
+        <li>
+          - <a href="/stats.php">Posting Gloryhole</a>
+        </li>
+        <li>
+          - <a href="/banlist.php">Leper's Colony</a>
+        </li>
+        <li>
+          - <a href="/supportmail.php">Support</a>
+        </li>
+        <li>
+          - <a href="/account.php?action=logout&amp;ma=94a3aab7">Log Out</a>
+        </li>
+
+      </ul>
+
+
+      <div class="oma_pal">
+        <script type="text/javascript">pal.make_frame(47, 728, 90);</script>
+        <noscript>
+          <a href='http://tenbux.somethingawful.com/www/delivery/ck.php?n=a36feb72&amp;cb=93847473' target='_blank'>
+            <img src='http://tenbux.somethingawful.com/www/delivery/avw.php?zoneid=47&amp;cb=304736438&amp;n=a36feb72' border='0' alt='' />
+          </a>
+        </noscript>
+      </div>
+
+
+
+
+
+      <div id="content">
+
+
+
+
+
+
+        <div class="breadcrumbs">
+          <span class="mainbodytextlarge">
+            <b>
+              <a href="/">The Something Awful Forums</a> &gt; <a href="forumdisplay.php?forumid=152">The Finer Arts</a> &gt; <a href="forumdisplay.php?forumid=27">ADTRW</a> &gt; <a href="showthread.php?threadid=3415929" class="bclast">Naruto Manga Thread 16: You won't defeat me by becoming Dr. Snakes.</a>
+            </b>
+          </span>
+        </div>
+
+        <div class="pages top">
+          Pages (85): <b>
+            <a style="pagenumber" href="showthread.php?threadid=3415929&amp;userid=0&amp;perpage=40&amp;pagenumber=1" title="first page">&laquo; First</a> ...   <a class="pagenumber" href="showthread.php?threadid=3415929&amp;userid=0&amp;perpage=40&amp;pagenumber=84" title="previous page">&lsaquo; Prev</a> &nbsp;&nbsp;&nbsp;<a class="pagenumber" href="showthread.php?threadid=3415929&amp;userid=0&amp;perpage=40&amp;pagenumber=81">81</a>  <a class="pagenumber" href="showthread.php?threadid=3415929&amp;userid=0&amp;perpage=40&amp;pagenumber=82">82</a>  <a class="pagenumber" href="showthread.php?threadid=3415929&amp;userid=0&amp;perpage=40&amp;pagenumber=83">83</a>  <a class="pagenumber" href="showthread.php?threadid=3415929&amp;userid=0&amp;perpage=40&amp;pagenumber=84">84</a>  <span class="curpage">85</span>&nbsp;&nbsp;&nbsp;
+          </b>
+        </div>
+        <div style="clear:right;"></div>
+
+        <div class="threadbar top">
+          <form action="search.php" method="post" class="threadsearch">
+            <!--<div><label>Search thread: &nbsp;</label><input type="text" name="keywords" value="" size="25"> &nbsp; <input type="submit" class="bginput" name="Submit" value="GO"><input type="hidden" name="threadid" value="3415929"><input type="hidden" name="action" value="do_search_simple"><input type="hidden" name="searchthru" value="3"><input type="hidden" name="show_previews" value="1"></div>-->
+          </form>
+          <ul class="postbuttons">
+
+
+
+
+
+
+
+
+            <li>
+              <img src="http://fi.somethingawful.com/images/buttons/button-unbookmark.gif" alt=""  id="button_bookmark" class="unbookmark" style="opacity:0.4;">
+            </li>
+            <li>
+              <a href="newthread.php?action=newthread&amp;forumid=27">
+                <img src="http://fi.somethingawful.com/images/forum-post.gif" alt="Post" title="">
+              </a>
+            </li>
+            <li>
+              <a href="newreply.php?action=newreply&amp;threadid=3415929">
+                <img src="http://fi.somethingawful.com/images/forum-reply.gif" alt="Reply" title="">
+              </a>
+            </li>
+
+
+          </ul>
+          <!--<div class="clear"></div>-->
+        </div>
+        <div id="thread" class="thread:3415929">
+          <table class="post" id="post403533962">
+            <tr  class="seen2" id="pti1">
+              <td class="userinfo userid-96484">
+                <dl class="userinfo">
+                  <dt class="author" title="">D1Sergo</dt>
+                  <dd class="registered">May 04, 2006</dd>
+                  <dd class="title">
+                    <img src="http://fi.somethingawful.com/customtitles/title-d1sergo-3.jpg" alt="" class="img" border="0">
+                      <br />
+                      Have consideration for others and pass that shit<br>
+                        <br class="pb">
+			</dd>
+                </dl>
+              </td>
+              <td class="postbody">
+                <!-- BeginContentMarker -->
+                <!-- google_ad_section_start -->
+                <div class="bbc-block">
+                  <h4>I posted:</h4>
+                  <blockquote>
+
+                    The manga didn't actually start until chapter 500, when Naruto was born.<br />
+
+                  </blockquote>
+                </div>
+
+
+                <br />
+
+                Naruto is a genjutsu summoned to the real world by Izanami to bring peace to the ninja world and defeat <s>Sin</s> The 10 Tailed Beast at which point he'll disappear and high five Itachi in the afterlife.
+                <!-- google_ad_section_end -->
+                <!-- EndContentMarker -->
+
+
+                <p class="editedby">
+	</td>
+            </tr>
+            <tr class="seen2">
+              <td class="postdate">
+                <a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3361" title="Mark thread seen up to this post">
+                  <img src="http://fi.somethingawful.com/style/posticon-seen.gif" alt="" border="0">
+                </a>
+                <a href="#post403533962">#</a>
+                <a href="/showthread.php?threadid=3415929&amp;userid=96484">?</a>
+                May 11, 2012 10:58
+              </td>
+              <td class="postlinks">
+                <ul class="profilelinks">
+                  <li>
+                    <a href="member.php?action=getinfo&amp;userid=96484">Profile</a>
+                  </li>
+                  <li>
+                    <a href="private.php?action=newmessage&amp;userid=96484">Message</a>
+                  </li>
+                  <li>
+                    <a href="search.php?action=do_search_posthistory&amp;userid=96484">Post History</a>
+                  </li>
+                </ul>
+                <ul class="postbuttons">
+
+
+                  <li class="alertbutton">
+                    <a href="modalert.php?postid=403533962&amp;username=D1Sergo">
+                      <img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators">
+                    </a>&nbsp;&nbsp;
+                  </li>
+
+                  <li>
+                    <a href="newreply.php?action=newreply&amp;postid=403533962">
+                      <img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title="">
+                    </a>
+                  </li>
+
+
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <table class="post" id="post403534157">
+            <tr  class="seen1" id="pti2">
+              <td class="userinfo userid-135292">
+                <dl class="userinfo">
+                  <dt class="author" title="">Cheapsteaks</dt>
+                  <dd class="registered">Apr 25, 2008</dd>
+                  <dd class="title">
+                    <img src="http://fi.somethingawful.com/safs/titles/6d/ad/00135292.0001.jpg" alt="" class="img" border="0">
+                      <br />
+                      Getting a heavy metal avatar leads to far less regrets than a heavy metal tattoo.<br>
+                        <br class="pb">
+			</dd>
+                </dl>
+              </td>
+              <td class="postbody">
+                <!-- BeginContentMarker -->
+                <!-- google_ad_section_start -->
+                <div class="bbc-block">
+                  <h4>D1Sergo posted:</h4>
+                  <blockquote>
+
+                    Naruto is a genjutsu summoned to the real world by Izanami to bring peace to the ninja world and defeat <s>Sin</s> The 10 Tailed Beast at which point he'll disappear and high five Itachi in the afterlife.<br />
+
+                  </blockquote>
+                </div>
+
+
+                <br />
+
+                <br />
+
+                So... does this mean Sakura is Kimhari?
+                <!-- google_ad_section_end -->
+                <!-- EndContentMarker -->
+
+
+                <p class="editedby">
+	</td>
+            </tr>
+            <tr class="seen1">
+              <td class="postdate">
+                <a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3362" title="Mark thread seen up to this post">
+                  <img src="http://fi.somethingawful.com/style/posticon-seen.gif" alt="" border="0">
+                </a>
+                <a href="#post403534157">#</a>
+                <a href="/showthread.php?threadid=3415929&amp;userid=135292">?</a>
+                May 11, 2012 11:04
+              </td>
+              <td class="postlinks">
+                <ul class="profilelinks">
+                  <li>
+                    <a href="member.php?action=getinfo&amp;userid=135292">Profile</a>
+                  </li>
+                  <li>
+                    <a href="private.php?action=newmessage&amp;userid=135292">Message</a>
+                  </li>
+                  <li>
+                    <a href="search.php?action=do_search_posthistory&amp;userid=135292">Post History</a>
+                  </li>
+                </ul>
+                <ul class="postbuttons">
+
+
+                  <li class="alertbutton">
+                    <a href="modalert.php?postid=403534157&amp;username=Cheapsteaks">
+                      <img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators">
+                    </a>&nbsp;&nbsp;
+                  </li>
+
+                  <li>
+                    <a href="newreply.php?action=newreply&amp;postid=403534157">
+                      <img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title="">
+                    </a>
+                  </li>
+
+
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <table class="post" id="post403541121">
+            <tr  class="seen2" id="pti3">
+              <td class="userinfo userid-158581">
+                <dl class="userinfo">
+                  <dt class="author" title="">Exercu</dt>
+                  <dd class="registered">Dec 07, 2009</dd>
+                  <dd class="title">
+                    <br>
+                      <br class="pb">
+			</dd>
+                </dl>
+              </td>
+              <td class="postbody">
+                <!-- BeginContentMarker -->
+                <!-- google_ad_section_start -->
+                <div class="bbc-block">
+                  <h4>Cheapsteaks posted:</h4>
+                  <blockquote>
+
+                    So... does this mean Sakura is Kimahri?<br />
+
+                  </blockquote>
+                </div>
+
+
+                <br />
+
+                If this makes Sasuke Seymour, I'm fairly okay with this.
+                <!-- google_ad_section_end -->
+                <!-- EndContentMarker -->
+
+
+                <p class="editedby">
+	</td>
+            </tr>
+            <tr class="seen2">
+              <td class="postdate">
+                <a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3363" title="Mark thread seen up to this post">
+                  <img src="http://fi.somethingawful.com/style/posticon-seen.gif" alt="" border="0">
+                </a>
+                <a href="#post403541121">#</a>
+                <a href="/showthread.php?threadid=3415929&amp;userid=158581">?</a>
+                May 11, 2012 14:55
+              </td>
+              <td class="postlinks">
+                <ul class="profilelinks">
+                  <li>
+                    <a href="member.php?action=getinfo&amp;userid=158581">Profile</a>
+                  </li>
+                  <li>
+                    <a href="private.php?action=newmessage&amp;userid=158581">Message</a>
+                  </li>
+                  <li>
+                    <a href="search.php?action=do_search_posthistory&amp;userid=158581">Post History</a>
+                  </li>
+                </ul>
+                <ul class="postbuttons">
+
+
+                  <li class="alertbutton">
+                    <a href="modalert.php?postid=403541121&amp;username=Exercu">
+                      <img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators">
+                    </a>&nbsp;&nbsp;
+                  </li>
+
+                  <li>
+                    <a href="newreply.php?action=newreply&amp;postid=403541121">
+                      <img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title="">
+                    </a>
+                  </li>
+
+
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <table class="post" id="post403541981">
+            <tr  class="seen1" id="pti4">
+              <td class="userinfo userid-96484">
+                <dl class="userinfo">
+                  <dt class="author" title="">D1Sergo</dt>
+                  <dd class="registered">May 04, 2006</dd>
+                  <dd class="title">
+                    <img src="http://fi.somethingawful.com/customtitles/title-d1sergo-3.jpg" alt="" class="img" border="0">
+                      <br />
+                      Have consideration for others and pass that shit<br>
+                        <br class="pb">
+			</dd>
+                </dl>
+              </td>
+              <td class="postbody">
+                <!-- BeginContentMarker -->
+                <!-- google_ad_section_start -->
+                <div class="bbc-block">
+                  <h4>Exercu posted:</h4>
+                  <blockquote>
+
+                    If this makes Sasuke Seymour, I'm fairly okay with this.<br />
+
+                  </blockquote>
+                </div>
+
+
+                <br />
+
+                No No No, Sasuke is Wakka, Itachi is Chappu and Orochimaru is Lulu, it all makes sense now guys
+                <!-- google_ad_section_end -->
+                <!-- EndContentMarker -->
+
+
+                <p class="editedby">
+	</td>
+            </tr>
+            <tr class="seen1">
+              <td class="postdate">
+                <a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3364" title="Mark thread seen up to this post">
+                  <img src="http://fi.somethingawful.com/style/posticon-seen.gif" alt="" border="0">
+                </a>
+                <a href="#post403541981">#</a>
+                <a href="/showthread.php?threadid=3415929&amp;userid=96484">?</a>
+                May 11, 2012 15:21
+              </td>
+              <td class="postlinks">
+                <ul class="profilelinks">
+                  <li>
+                    <a href="member.php?action=getinfo&amp;userid=96484">Profile</a>
+                  </li>
+                  <li>
+                    <a href="private.php?action=newmessage&amp;userid=96484">Message</a>
+                  </li>
+                  <li>
+                    <a href="search.php?action=do_search_posthistory&amp;userid=96484">Post History</a>
+                  </li>
+                </ul>
+                <ul class="postbuttons">
+
+
+                  <li class="alertbutton">
+                    <a href="modalert.php?postid=403541981&amp;username=D1Sergo">
+                      <img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators">
+                    </a>&nbsp;&nbsp;
+                  </li>
+
+                  <li>
+                    <a href="newreply.php?action=newreply&amp;postid=403541981">
+                      <img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title="">
+                    </a>
+                  </li>
+
+
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <table class="post" id="post403560534">
+            <tr  class="seen2" id="pti5">
+              <td class="userinfo userid-169054">
+                <dl class="userinfo">
+                  <dt class="author" title="">Pyrotoad</dt>
+                  <dd class="registered">Oct 24, 2010</dd>
+                  <dd class="title">
+                    <div class="bbc-center">
+                      <img src="http://fi.somethingawful.com/safs/titles/6d/1b/00169054.0001.jpg" alt="" class="img" border="0">
+                        <br />
+                        ribbit
+                    </div>
+                    <br>
+                      <br class="pb">
+			</dd>
+                </dl>
+              </td>
+              <td class="postbody">
+                <!-- BeginContentMarker -->
+                <!-- google_ad_section_start -->
+                So who's Brother? <img src="http://i.somethingawful.com/forumsystem/emoticons/emot-colbert.gif" border="0" alt="" title=":colbert:">
+                  <!-- google_ad_section_end -->
+                  <!-- EndContentMarker -->
+
+
+                  <p class="editedby">
+	</td>
+            </tr>
+            <tr class="seen2">
+              <td class="postdate">
+                <a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3365" title="Mark thread seen up to this post">
+                  <img src="http://fi.somethingawful.com/style/posticon-seen.gif" alt="" border="0">
+                </a>
+                <a href="#post403560534">#</a>
+                <a href="/showthread.php?threadid=3415929&amp;userid=169054">?</a>
+                May 12, 2012 07:20
+              </td>
+              <td class="postlinks">
+                <ul class="profilelinks">
+                  <li>
+                    <a href="member.php?action=getinfo&amp;userid=169054">Profile</a>
+                  </li>
+                  <li>
+                    <a href="private.php?action=newmessage&amp;userid=169054">Message</a>
+                  </li>
+                  <li>
+                    <a href="search.php?action=do_search_posthistory&amp;userid=169054">Post History</a>
+                  </li>
+                </ul>
+                <ul class="postbuttons">
+
+
+                  <li class="alertbutton">
+                    <a href="modalert.php?postid=403560534&amp;username=Pyrotoad">
+                      <img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators">
+                    </a>&nbsp;&nbsp;
+                  </li>
+
+                  <li>
+                    <a href="newreply.php?action=newreply&amp;postid=403560534">
+                      <img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title="">
+                    </a>
+                  </li>
+
+
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <table class="post" id="post403560676">
+            <tr  class="seen1" id="pti6">
+              <td class="userinfo userid-169030">
+                <dl class="userinfo">
+                  <dt class="author" title="">Tae</dt>
+                  <dd class="registered">Oct 24, 2010</dd>
+                  <dd class="title">
+                    <div class="bbc-center">
+                      <img src="http://fi.somethingawful.com/safs/titles/a6/e3/00169030.0003.jpg" alt="" class="img" border="0">
+                        <br />
+                        We will find a way (Without Boozer)
+                    </div>
+                    <br>
+                      <br class="pb">
+			</dd>
+                </dl>
+              </td>
+              <td class="postbody">
+                <!-- BeginContentMarker -->
+                <!-- google_ad_section_start -->
+                <div class="bbc-block">
+                  <h4>Pyrotoad posted:</h4>
+                  <blockquote>
+
+                    So who's Brother? <img src="http://i.somethingawful.com/forumsystem/emoticons/emot-colbert.gif" border="0" alt="" title=":colbert:">
+                      <br />
+
+                    </blockquote>
+                </div>
+
+
+                <br />
+
+                Do we not have an incest Narauto character?
+                <!-- google_ad_section_end -->
+                <!-- EndContentMarker -->
+
+
+                <p class="editedby">
+	</td>
+            </tr>
+            <tr class="seen1">
+              <td class="postdate">
+                <a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3366" title="Mark thread seen up to this post">
+                  <img src="http://fi.somethingawful.com/style/posticon-seen.gif" alt="" border="0">
+                </a>
+                <a href="#post403560676">#</a>
+                <a href="/showthread.php?threadid=3415929&amp;userid=169030">?</a>
+                May 12, 2012 07:39
+              </td>
+              <td class="postlinks">
+                <ul class="profilelinks">
+                  <li>
+                    <a href="member.php?action=getinfo&amp;userid=169030">Profile</a>
+                  </li>
+                  <li>
+                    <a href="private.php?action=newmessage&amp;userid=169030">Message</a>
+                  </li>
+                  <li>
+                    <a href="search.php?action=do_search_posthistory&amp;userid=169030">Post History</a>
+                  </li>
+                </ul>
+                <ul class="postbuttons">
+
+
+                  <li class="alertbutton">
+                    <a href="modalert.php?postid=403560676&amp;username=Tae">
+                      <img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators">
+                    </a>&nbsp;&nbsp;
+                  </li>
+
+                  <li>
+                    <a href="newreply.php?action=newreply&amp;postid=403560676">
+                      <img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title="">
+                    </a>
+                  </li>
+
+
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <table class="post" id="post403560738">
+            <tr  class="seen2" id="pti7">
+              <td class="userinfo userid-185993">
+                <dl class="userinfo">
+                  <dt class="author" title="">Silver2195</dt>
+                  <dd class="registered">Apr 04, 2012</dd>
+                  <dd class="title">
+                    <img src="http://fi.somethingawful.com/images/newbie.gif" alt="" class="img" border="0">
+                      <br>
+                        <br class="pb">
+			</dd>
+                </dl>
+              </td>
+              <td class="postbody">
+                <!-- BeginContentMarker -->
+                <!-- google_ad_section_start -->
+                <div class="bbc-block">
+                  <h4>Tae posted:</h4>
+                  <blockquote>
+
+                    Do we not have an incest Narauto character?<br />
+
+                  </blockquote>
+                </div>
+
+
+                <br />
+
+                I don't remember any incest in Naruto, unless you count Naruto's reaction to meeting his mother.<br />
+
+                <br />
+
+                Edit: And Tobi said that Itachi killed his girlfriend when he wiped out his clan, so she was presumably at least a distant cousin.
+                <!-- google_ad_section_end -->
+                <!-- EndContentMarker -->
+
+
+                <p class="editedby">
+                  <span>Silver2195 fucked around with this message at May 12, 2012 around 07:51</span>
+                </td>
+            </tr>
+            <tr class="seen2">
+              <td class="postdate">
+                <a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3367" title="Mark thread seen up to this post">
+                  <img src="http://fi.somethingawful.com/style/posticon-seen.gif" alt="" border="0">
+                </a>
+                <a href="#post403560738">#</a>
+                <a href="/showthread.php?threadid=3415929&amp;userid=185993">?</a>
+                May 12, 2012 07:47
+              </td>
+              <td class="postlinks">
+                <ul class="profilelinks">
+                  <li>
+                    <a href="member.php?action=getinfo&amp;userid=185993">Profile</a>
+                  </li>
+                  <li>
+                    <a href="private.php?action=newmessage&amp;userid=185993">Message</a>
+                  </li>
+                  <li>
+                    <a href="search.php?action=do_search_posthistory&amp;userid=185993">Post History</a>
+                  </li>
+                </ul>
+                <ul class="postbuttons">
+
+
+                  <li class="alertbutton">
+                    <a href="modalert.php?postid=403560738&amp;username=Silver2195">
+                      <img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators">
+                    </a>&nbsp;&nbsp;
+                  </li>
+
+                  <li>
+                    <a href="newreply.php?action=newreply&amp;postid=403560738">
+                      <img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title="">
+                    </a>
+                  </li>
+
+
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <table class="post" id="post403562971">
+            <tr  class="seen1" id="pti8">
+              <td class="userinfo userid-154779">
+                <dl class="userinfo">
+                  <dt class="author" title="">Dexo</dt>
+                  <dd class="registered">Aug 14, 2009</dd>
+                  <dd class="title">
+                    <img src="http://fi.somethingawful.com/safs/titles/59/2e/00154779.0001.gif" alt="" class="img" border="0">
+                      <br />
+                      I have seen things no man should ever see, they have made me realize that our own existence is nothing more than an illusion in the mind of a great being<br>
+                        <br class="pb">
+			</dd>
+                </dl>
+              </td>
+              <td class="postbody">
+                <!-- BeginContentMarker -->
+                <!-- google_ad_section_start -->
+                <div class="bbc-block">
+                  <h4>Silver2195 posted:</h4>
+                  <blockquote>
+
+                    I don't remember any incest in Naruto, unless you count Naruto's reaction to meeting his mother.<br />
+
+                    <br />
+
+                    Edit: And Tobi said that Itachi killed his girlfriend when he wiped out his clan, so she was presumably at least a distant cousin.<br />
+
+                  </blockquote>
+                </div>
+
+
+                <br />
+
+                Hyuuga's
+                <!-- google_ad_section_end -->
+                <!-- EndContentMarker -->
+
+
+                <p class="editedby">
+	</td>
+            </tr>
+            <tr class="seen1">
+              <td class="postdate">
+                <a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3368" title="Mark thread seen up to this post">
+                  <img src="http://fi.somethingawful.com/style/posticon-seen.gif" alt="" border="0">
+                </a>
+                <a href="#post403562971">#</a>
+                <a href="/showthread.php?threadid=3415929&amp;userid=154779">?</a>
+                May 12, 2012 10:24
+              </td>
+              <td class="postlinks">
+                <ul class="profilelinks">
+                  <li>
+                    <a href="member.php?action=getinfo&amp;userid=154779">Profile</a>
+                  </li>
+                  <li>
+                    <a href="private.php?action=newmessage&amp;userid=154779">Message</a>
+                  </li>
+                  <li>
+                    <a href="search.php?action=do_search_posthistory&amp;userid=154779">Post History</a>
+                  </li>
+                </ul>
+                <ul class="postbuttons">
+
+
+                  <li class="alertbutton">
+                    <a href="modalert.php?postid=403562971&amp;username=Dexo">
+                      <img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators">
+                    </a>&nbsp;&nbsp;
+                  </li>
+
+                  <li>
+                    <a href="newreply.php?action=newreply&amp;postid=403562971">
+                      <img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title="">
+                    </a>
+                  </li>
+
+
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <table class="post" id="post403567753">
+            <tr  class="seen2" id="pti9">
+              <td class="userinfo userid-185993">
+                <dl class="userinfo">
+                  <dt class="author" title="">Silver2195</dt>
+                  <dd class="registered">Apr 04, 2012</dd>
+                  <dd class="title">
+                    <img src="http://fi.somethingawful.com/images/newbie.gif" alt="" class="img" border="0">
+                      <br>
+                        <br class="pb">
+			</dd>
+                </dl>
+              </td>
+              <td class="postbody">
+                <!-- BeginContentMarker -->
+                <!-- google_ad_section_start -->
+                <div class="bbc-block">
+                  <h4>Dexo posted:</h4>
+                  <blockquote>
+
+                    Hyuuga's<br />
+
+                  </blockquote>
+                </div>
+
+
+                <br />
+
+                I don't really get where the Neji/Hinata shippers are coming from, to be honest.  If anything, Neji seems to want Hinata to be with Naruto.
+                <!-- google_ad_section_end -->
+                <!-- EndContentMarker -->
+
+
+                <p class="editedby">
+	</td>
+            </tr>
+            <tr class="seen2">
+              <td class="postdate">
+                <a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3369" title="Mark thread seen up to this post">
+                  <img src="http://fi.somethingawful.com/style/posticon-seen.gif" alt="" border="0">
+                </a>
+                <a href="#post403567753">#</a>
+                <a href="/showthread.php?threadid=3415929&amp;userid=185993">?</a>
+                May 12, 2012 14:37
+              </td>
+              <td class="postlinks">
+                <ul class="profilelinks">
+                  <li>
+                    <a href="member.php?action=getinfo&amp;userid=185993">Profile</a>
+                  </li>
+                  <li>
+                    <a href="private.php?action=newmessage&amp;userid=185993">Message</a>
+                  </li>
+                  <li>
+                    <a href="search.php?action=do_search_posthistory&amp;userid=185993">Post History</a>
+                  </li>
+                </ul>
+                <ul class="postbuttons">
+
+
+                  <li class="alertbutton">
+                    <a href="modalert.php?postid=403567753&amp;username=Silver2195">
+                      <img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators">
+                    </a>&nbsp;&nbsp;
+                  </li>
+
+                  <li>
+                    <a href="newreply.php?action=newreply&amp;postid=403567753">
+                      <img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title="">
+                    </a>
+                  </li>
+
+
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <table class="post" id="post403568650">
+            <tr  class="seen1" id="pti10">
+              <td class="userinfo userid-150259">
+                <dl class="userinfo">
+                  <dt class="author" title="">Narahari</dt>
+                  <dd class="registered">Apr 12, 2009</dd>
+                  <dd class="title">
+                    <br>
+                      <br class="pb">
+			</dd>
+                </dl>
+              </td>
+              <td class="postbody">
+                <!-- BeginContentMarker -->
+                <!-- google_ad_section_start -->
+                <div class="bbc-block">
+                  <h4>Silver2195 posted:</h4>
+                  <blockquote>
+
+                    I don't really get ... shippers.<br />
+
+                  </blockquote>
+                </div>
+
+
+                <br />
+
+                I agree on the specifics, but I am definitely under the impression that it takes a certain mentality to take your interpretation of a romance among fictional characters and proclaim it to the internet as the one true pairing.<br />
+
+                <br />
+
+                Oddly, Naruto is the only weekly manga I've been reading lately.  I lost all interest in bleach after the last arc and One Piece hasn't really been doing it for me since the timeskip (I'll probably binge on it in a year or two to catch up).  I don't hate the Kabuto backstory as much as some of you seem to, though there are certainly a lot of loose threads tossed around the board and it did feel a bit unnecessary.  I wonder if the deus ex itachi is going to end up being <span class="bbc-spoiler" onmouseover="this.style.color='#FFFFFF';" onmouseout="this.style.color=this.style.backgroundColor='#000000'">&nbsp; Kabuto is retroactively given some kind of identity with the ultimate friendship eyehax no jutsu, possibly even giving a dose of it to the emo&nbsp;</span>.
+                <!-- google_ad_section_end -->
+                <!-- EndContentMarker -->
+
+
+                <p class="editedby">
+	</td>
+            </tr>
+            <tr class="seen1">
+              <td class="postdate">
+                <a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3370" title="Mark thread seen up to this post">
+                  <img src="http://fi.somethingawful.com/style/posticon-seen.gif" alt="" border="0">
+                </a>
+                <a href="#post403568650">#</a>
+                <a href="/showthread.php?threadid=3415929&amp;userid=150259">?</a>
+                May 12, 2012 15:24
+              </td>
+              <td class="postlinks">
+                <ul class="profilelinks">
+                  <li>
+                    <a href="member.php?action=getinfo&amp;userid=150259">Profile</a>
+                  </li>
+                  <li>
+                    <a href="private.php?action=newmessage&amp;userid=150259">Message</a>
+                  </li>
+                  <li>
+                    <a href="search.php?action=do_search_posthistory&amp;userid=150259">Post History</a>
+                  </li>
+                </ul>
+                <ul class="postbuttons">
+
+
+                  <li class="alertbutton">
+                    <a href="modalert.php?postid=403568650&amp;username=Narahari">
+                      <img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators">
+                    </a>&nbsp;&nbsp;
+                  </li>
+
+                  <li>
+                    <a href="newreply.php?action=newreply&amp;postid=403568650">
+                      <img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title="">
+                    </a>
+                  </li>
+
+
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <table class="post" id="post403574669">
+            <tr  class="altcolor2" id="pti11">
+              <td class="userinfo userid-183048">
+                <dl class="userinfo">
+                  <dt class="author" title="">Sanguinia</dt>
+                  <dd class="registered">Jan 01, 2012</dd>
+                  <dd class="title">
+                    <img src="http://fi.somethingawful.com/images/newbie.gif" alt="" class="img" border="0">
+                      <br>
+                        <br class="pb">
+			</dd>
+                </dl>
+              </td>
+              <td class="postbody">
+                <!-- BeginContentMarker -->
+                <!-- google_ad_section_start -->
+                <div class="bbc-block">
+                  <h4>Narahari posted:</h4>
+                  <blockquote>
+
+                    I agree on the specifics, but I am definitely under the impression that it takes a certain mentality to take your interpretation of a romance among fictional characters and proclaim it to the internet as the one true pairing.<br />
+
+                    <br />
+
+                  </blockquote>
+                </div>
+
+
+                <br />
+
+                I indulge in shipping as part of a larger indulgence in the world of fanfiction. Its really less about shipping so much as using and combining characters and settings in ways the main storyline couldn't/wouldn't for fun, though romance does play into it on occasion.<br />
+
+                <br />
+
+                Then again, I get the feeling you're talking less about the typical shipper, ie someone who enjoys/goes a smidge overboard on the romance elements of media, and more about the psycho types like the "Zutarans" from Avatar: The Last Airbender, who write essays about how their couple of choice is THE ONLY ONE THAT FITS WITH THE STORY, GOD THE PEOPLE WHO WRITE THIS SHOW ARE IDIOTS IF THEY DON'T PAIR THESE TWO UP and that sort of thing.<br />
+
+                <br />
+
+                Rest assured that at least some of "us people," find those folks as distasteful and dumb as you do.
+                <!-- google_ad_section_end -->
+                <!-- EndContentMarker -->
+
+
+                <p class="editedby">
+	</td>
+            </tr>
+            <tr class="altcolor2">
+              <td class="postdate">
+                <a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3371" title="Mark thread seen up to this post">
+                  <img src="http://fi.somethingawful.com/style/posticon-new.gif" alt="" border="0">
+                </a>
+                <a href="#post403574669">#</a>
+                <a href="/showthread.php?threadid=3415929&amp;userid=183048">?</a>
+                May 12, 2012 20:00
+              </td>
+              <td class="postlinks">
+                <ul class="profilelinks">
+                  <li>
+                    <a href="member.php?action=getinfo&amp;userid=183048">Profile</a>
+                  </li>
+                  <li>
+                    <a href="private.php?action=newmessage&amp;userid=183048">Message</a>
+                  </li>
+                  <li>
+                    <a href="search.php?action=do_search_posthistory&amp;userid=183048">Post History</a>
+                  </li>
+                </ul>
+                <ul class="postbuttons">
+
+
+                  <li class="alertbutton">
+                    <a href="modalert.php?postid=403574669&amp;username=Sanguinia">
+                      <img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators">
+                    </a>&nbsp;&nbsp;
+                  </li>
+
+                  <li>
+                    <a href="newreply.php?action=newreply&amp;postid=403574669">
+                      <img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title="">
+                    </a>
+                  </li>
+
+
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <table class="post" id="post403574968">
+            <tr  class="altcolor1" id="pti12">
+              <td class="userinfo userid-175787">
+                <dl class="userinfo">
+                  <dt class="author" title="">pandaK</dt>
+                  <dd class="registered">May 05, 2011</dd>
+                  <dd class="title">
+                    <div class="bbc-center">
+                      <img src="http://fi.somethingawful.com/safs/titles/74/37/00175787.0001.gif" alt="" class="img" border="0">
+                        <br />
+                        It's like a fairy circle!
+                    </div>
+                    <br>
+                      <br class="pb">
+			</dd>
+                </dl>
+              </td>
+              <td class="postbody">
+                <!-- BeginContentMarker -->
+                <!-- google_ad_section_start -->
+                Shit I thought I was in The Dark Id's FFX LP there for a moment.
+                <!-- google_ad_section_end -->
+                <!-- EndContentMarker -->
+
+
+                <p class="editedby">
+	</td>
+            </tr>
+            <tr class="altcolor1">
+              <td class="postdate">
+                <a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3372" title="Mark thread seen up to this post">
+                  <img src="http://fi.somethingawful.com/style/posticon-new.gif" alt="" border="0">
+                </a>
+                <a href="#post403574968">#</a>
+                <a href="/showthread.php?threadid=3415929&amp;userid=175787">?</a>
+                May 12, 2012 20:13
+              </td>
+              <td class="postlinks">
+                <ul class="profilelinks">
+                  <li>
+                    <a href="member.php?action=getinfo&amp;userid=175787">Profile</a>
+                  </li>
+                  <li>
+                    <a href="private.php?action=newmessage&amp;userid=175787">Message</a>
+                  </li>
+                  <li>
+                    <a href="search.php?action=do_search_posthistory&amp;userid=175787">Post History</a>
+                  </li>
+                </ul>
+                <ul class="postbuttons">
+
+
+                  <li class="alertbutton">
+                    <a href="modalert.php?postid=403574968&amp;username=pandaK">
+                      <img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators">
+                    </a>&nbsp;&nbsp;
+                  </li>
+
+                  <li>
+                    <a href="newreply.php?action=newreply&amp;postid=403574968">
+                      <img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title="">
+                    </a>
+                  </li>
+
+
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <table class="post" id="post403581749">
+            <tr  class="altcolor2" id="pti13">
+              <td class="userinfo userid-176866">
+                <dl class="userinfo">
+                  <dt class="author" title="">Shindragon</dt>
+                  <dd class="registered">Jun 06, 2011</dd>
+                  <dd class="title">
+                    <span class="bbcf-xx-large">
+                      <span style="color:red;">
+                        I SCREAM WHENEVER I STREAM GAMES BECAUSE I POSSIBLY HAVE A DISORDER <img src="http://fi.somethingawful.com/images/smilies/biggrin.gif" border="0" alt="" title=":D">
+                      </span>
+                    </span>
+                    <br>
+                      <br class="pb">
+			</dd>
+                </dl>
+              </td>
+              <td class="postbody">
+                <!-- BeginContentMarker -->
+                <!-- google_ad_section_start -->
+                Yeah, shut up about shipping. It may be the anime thread, but just no.
+                <!-- google_ad_section_end -->
+                <!-- EndContentMarker -->
+
+
+                <p class="editedby">
+	</td>
+            </tr>
+            <tr class="altcolor2">
+              <td class="postdate">
+                <a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3373" title="Mark thread seen up to this post">
+                  <img src="http://fi.somethingawful.com/style/posticon-new.gif" alt="" border="0">
+                </a>
+                <a href="#post403581749">#</a>
+                <a href="/showthread.php?threadid=3415929&amp;userid=176866">?</a>
+                May 13, 2012 01:14
+              </td>
+              <td class="postlinks">
+                <ul class="profilelinks">
+                  <li>
+                    <a href="member.php?action=getinfo&amp;userid=176866">Profile</a>
+                  </li>
+                  <li>
+                    <a href="private.php?action=newmessage&amp;userid=176866">Message</a>
+                  </li>
+                  <li>
+                    <a href="search.php?action=do_search_posthistory&amp;userid=176866">Post History</a>
+                  </li>
+                </ul>
+                <ul class="postbuttons">
+
+
+                  <li class="alertbutton">
+                    <a href="modalert.php?postid=403581749&amp;username=Shindragon">
+                      <img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators">
+                    </a>&nbsp;&nbsp;
+                  </li>
+
+                  <li>
+                    <a href="newreply.php?action=newreply&amp;postid=403581749">
+                      <img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title="">
+                    </a>
+                  </li>
+
+
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <table class="post" id="post403590008">
+            <tr  class="altcolor1" id="pti14">
+              <td class="userinfo userid-119191">
+                <dl class="userinfo">
+                  <dt class="author" title="">Serious Frolicking</dt>
+                  <dd class="registered">Jul 01, 2007</dd>
+                  <dd class="title">
+                    <div class="bbc-center">Awkward phrasing, for the most part.</div>
+                    <br>
+                      <br class="pb">
+			</dd>
+                </dl>
+              </td>
+              <td class="postbody">
+                <!-- BeginContentMarker -->
+                <!-- google_ad_section_start -->
+                <div class="bbc-block">
+                  <h4>Sanguinia posted:</h4>
+                  <blockquote>
+
+                    My shipping preferences are qualitatively superior to any other kind.   <br />
+
+                  </blockquote>
+                </div>
+
+
+                <br />
+
+                <br />
+
+                Don't kid yourself.  There isn't much difference between fan fiction enthusiasts and  obsessive shippers.  It is like saying that sure, you eat live puppies, but not the cute ones.
+                <!-- google_ad_section_end -->
+                <!-- EndContentMarker -->
+
+
+                <p class="editedby">
+	</td>
+            </tr>
+            <tr class="altcolor1">
+              <td class="postdate">
+                <a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3374" title="Mark thread seen up to this post">
+                  <img src="http://fi.somethingawful.com/style/posticon-new.gif" alt="" border="0">
+                </a>
+                <a href="#post403590008">#</a>
+                <a href="/showthread.php?threadid=3415929&amp;userid=119191">?</a>
+                May 13, 2012 11:28
+              </td>
+              <td class="postlinks">
+                <ul class="profilelinks">
+                  <li>
+                    <a href="member.php?action=getinfo&amp;userid=119191">Profile</a>
+                  </li>
+                  <li>
+                    <a href="private.php?action=newmessage&amp;userid=119191">Message</a>
+                  </li>
+                  <li>
+                    <a href="search.php?action=do_search_posthistory&amp;userid=119191">Post History</a>
+                  </li>
+                </ul>
+                <ul class="postbuttons">
+
+
+                  <li class="alertbutton">
+                    <a href="modalert.php?postid=403590008&amp;username=Serious+Frolicking">
+                      <img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators">
+                    </a>&nbsp;&nbsp;
+                  </li>
+
+                  <li>
+                    <a href="newreply.php?action=newreply&amp;postid=403590008">
+                      <img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title="">
+                    </a>
+                  </li>
+
+
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <table class="post" id="post403591527">
+            <tr  class="altcolor2" id="pti15">
+              <td class="userinfo userid-185114" id="lastpost">
+                <dl class="userinfo">
+                  <dt class="author" title="">Triple Elation</dt>
+                  <dd class="registered">Feb 24, 2012</dd>
+                  <dd class="title">
+                    <div class="bbc-center">
+                      <img src="http://fi.somethingawful.com/safs/titles/a4/87/00185114.0001.jpg" alt="" class="img" border="0">
+                        <br />
+                        1 + 2 + 4 + 8 + ... = -1
+                    </div>
+                    <br>
+                      <br class="pb">
+			</dd>
+                </dl>
+              </td>
+              <td class="postbody">
+                <!-- BeginContentMarker -->
+                <!-- google_ad_section_start -->
+                I suppose you could ostensibly talk about romance in this manga instead of "shipping", but given the interest Kishimoto has in the subject and his competence at handling it, you might as well talk about the roles and development of dogs. <br />
+
+                <br />
+
+                So, how about Pochi? Will we be seeing more of him? Is there any important meaning in his name having been changed to "Shooting Star" parallel to that moment where he learned all about the unfairness of life and how sometimes you can't trust even those closest to you, when push comes to shove?<br />
+
+                <br />
+
+                Also consider Kakashi's summoned dogs. They have the henohenomoheji symbol on their back, which thematically ties them with Kakashi himself and -- at first glance -- the innocence of schoolchildren who would draw these symbols, but also themes of mystery and underhanded conduct. Note the significance of Kakashi's main summoned dog using the same shampoo as Sakura.<br />
+
+                <br />
+
+                Compare and contrast these bystanders with Akamaru, who seems to truly have agency in his own story. Akamaru decides when, how and where to pee, and his growth symbolizes the growing presence and importance of dogs vs. the waning power of the frogs, snails and snakes. This latter theme has subtle manifestations throughout the manga, though by far the most obvious are the death of the legendary three and the failure of the new generation to follow in their footsteps (Sakura has not summoned anything at all, and Sasuke seems to be all about hawks now).<br />
+
+                <br />
+
+                Given these themes, it only makes sense that Naruto will ultimately realize that Sakura is not the one for him, and transfer his feelings to Kiba's sister.<br />
+
+                <br />
+
+                Crap, we're back to shipping.
+                <!-- google_ad_section_end -->
+                <!-- EndContentMarker -->
+
+
+                <p class="editedby">
+	</td>
+            </tr>
+            <tr class="altcolor2">
+              <td class="postdate">
+                <a href="/showthread.php?action=setseen&amp;threadid=3415929&amp;index=3375" title="Mark thread seen up to this post">
+                  <img src="http://fi.somethingawful.com/style/posticon-new.gif" alt="" border="0">
+                </a>
+                <a href="#post403591527">#</a>
+                <a href="/showthread.php?threadid=3415929&amp;userid=185114">?</a>
+                May 13, 2012 12:36
+              </td>
+              <td class="postlinks">
+                <ul class="profilelinks">
+                  <li>
+                    <a href="member.php?action=getinfo&amp;userid=185114">Profile</a>
+                  </li>
+                  <li>
+                    <a href="private.php?action=newmessage&amp;userid=185114">Message</a>
+                  </li>
+                  <li>
+                    <a href="search.php?action=do_search_posthistory&amp;userid=185114">Post History</a>
+                  </li>
+                </ul>
+                <ul class="postbuttons">
+
+
+                  <li class="alertbutton">
+                    <a href="modalert.php?postid=403591527&amp;username=Triple+Elation">
+                      <img src="http://forumimages.somethingawful.com/images/button-report.gif" border="0" alt="Alert Moderators">
+                    </a>&nbsp;&nbsp;
+                  </li>
+
+                  <li>
+                    <a href="newreply.php?action=newreply&amp;postid=403591527">
+                      <img src="http://fi.somethingawful.com/images/sa-quote.gif" alt="Quote"  title="">
+                    </a>
+                  </li>
+
+
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="threadbar bottom">
+
+          <div lang="X60CKbat1msQrcr1K50MR8IN1" class="threadrate">
+
+            <div id="rateform_js_attach">
+              <b>Rate Thread:</b>
+            </div>
+            <form name="rateform" method="POST" action="threadrate.php" id="rateform">
+              <select name="vote">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <input type="hidden" name="threadid" value="3415929">
+                <input type="hidden" name="digg_url" value="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fforums.somethingawful.com%2Fshowthread.php%3Fthreadid%3D3415929&amp;title=Naruto+Manga+Thread+16%3A+You+won%27t+defeat+me+by+becoming+Dr.+Snakes.">
+                  <input type="hidden" name="digg_title" value="Naruto+Manga+Thread+16%3A+You+won%27t+defeat+me+by+becoming+Dr.+Snakes.">
+                    <input type="submit" value="Vote!">
+		</form>
+          </div>
+
+          <ul class="postbuttons">
+
+            <li>
+              <a href="newthread.php?action=newthread&amp;forumid=27">
+                <img src="http://fi.somethingawful.com/images/forum-post.gif" alt="Post" title="">
+              </a>
+            </li>
+            <li>
+              <a href="newreply.php?action=newreply&amp;threadid=3415929">
+                <img src="http://fi.somethingawful.com/images/forum-reply.gif" alt="Reply" title="">
+              </a>
+            </li>
+
+
+          </ul>
+          <div class="clear"></div>
+        </div>
+
+
+        <center>
+
+          <div id="ad_banner_user">
+            <a href="http://cadencewatch.com/r/something-great/" target="_blank">
+              <img src="http://fi.somethingawful.com/safs/goonbas/8/0/1653.0001.gif" alt="" width="468" height="60">
+            </a>
+            <br>
+              <a href="https://secure.somethingawful.com/products/ad-banner.php" target="_blank" title="Affordable rates, high exposure!">Advertise here!</a> | <a href="/adlist.php" class="all_ads">Browse all ads</a>
+            </div>
+        </center>
+
+
+        <div class="breadcrumbs">
+          <a href="#top">
+            <img src="http://i.somethingawful.com/forumsystem/html/up.gif" alt="" height="15" width="20" border="0">
+          </a>
+          <span class="mainbodytextlarge">
+            <b>
+              <a href="/">The Something Awful Forums</a> &gt; <a href="forumdisplay.php?forumid=152">The Finer Arts</a> &gt; <a href="forumdisplay.php?forumid=27">ADTRW</a> &gt; <a href="showthread.php?threadid=3415929" class="bclast">Naruto Manga Thread 16: You won't defeat me by becoming Dr. Snakes.</a>
+            </b>
+          </span>
+        </div>
+        <div class="pages bottom">
+          Pages (85): <b>
+            <a style="pagenumber" href="showthread.php?threadid=3415929&amp;userid=0&amp;perpage=40&amp;pagenumber=1" title="first page">&laquo; First</a> ...   <a class="pagenumber" href="showthread.php?threadid=3415929&amp;userid=0&amp;perpage=40&amp;pagenumber=84" title="previous page">&lsaquo; Prev</a> &nbsp;&nbsp;&nbsp;<a class="pagenumber" href="showthread.php?threadid=3415929&amp;userid=0&amp;perpage=40&amp;pagenumber=81">81</a>  <a class="pagenumber" href="showthread.php?threadid=3415929&amp;userid=0&amp;perpage=40&amp;pagenumber=82">82</a>  <a class="pagenumber" href="showthread.php?threadid=3415929&amp;userid=0&amp;perpage=40&amp;pagenumber=83">83</a>  <a class="pagenumber" href="showthread.php?threadid=3415929&amp;userid=0&amp;perpage=40&amp;pagenumber=84">84</a>  <span class="curpage">85</span>&nbsp;&nbsp;&nbsp;
+          </b>
+        </div>
+        <div class="clear"></div>
+
+
+        <form action="forumdisplay.php" method="get">
+          <input type="hidden" name="s" value="">
+            <input type="hidden" name="daysprune" value="">
+              <select name="forumid"
+              onchange="window.location=('forumdisplay.php?daysprune=&amp;forumid='+this.options[this.selectedIndex].value)">
+                <option value="-1" selected="">Please select one:</option>
+                <option value="-1">--------------------</option>
+                <option value="pm" >Private Messages</option>
+                <option value="cp" >User Control Panel</option>
+                <option value="search" >Search Forums</option>
+                <option value="home" >Forums Home</option>
+                <option value="lc" >Leper's Colony</option>
+                <option value="-1">--------------------</option>
+                <option value="48" > Main</option>
+                <option value="1" >-- General Bullshit</option>
+                <option value="155" >---- SA's Front Page Discussion</option>
+                <option value="214" >---- E/N Bullshit</option>
+                <option value="26" >-- FYAD: Good Shit OP</option>
+                <option value="154" >---- Twisty</option>
+                <option value="51" > Discussion</option>
+                <option value="44" >-- Games</option>
+                <option value="145" >---- The MMO HMO</option>
+                <option value="146" >------ WoW: Goon Squad</option>
+                <option value="250" >------ The StarCraft II Zealot Zone</option>
+                <option value="256" >---- 3rd Street Skyrims: Elder Saints The Fifth</option>
+                <option value="93" >---- Private Game Servers</option>
+                <option value="234" >---- Traditional Games</option>
+                <option value="103" >------ Play by Post</option>
+                <option value="191" >---- Let's Play!</option>
+                <option value="192" >-- Inspect Your Gadgets</option>
+                <option value="190" >---- The A/V Arena</option>
+                <option value="158" >-- Ask / Tell</option>
+                <option value="211" >---- Tourism &amp; Travel</option>
+                <option value="200" >---- Business, Finance, and Careers</option>
+                <option value="46" >-- Debate &amp; Discussion</option>
+                <option value="162" >---- Science, Academics and Languages</option>
+                <option value="22" >-- Serious Hardware / Software Crap</option>
+                <option value="170" >---- Haus of Tech Support</option>
+                <option value="202" >---- The Cavern of COBOL</option>
+                <option value="219" >---- YOSPOS</option>
+                <option value="122" >-- Sports Argument Stadium* </option>
+                <option value="181" >---- The Football Funhouse</option>
+                <option value="248" >---- The Armchair Quarterback</option>
+                <option value="175" >---- The Ray Parlour</option>
+                <option value="177" >---- Punchsport Pagoda</option>
+                <option value="139" >---- Poker in the Rear</option>
+                <option value="179" >-- You Look Like Shit</option>
+                <option value="183" >---- The Goon Doctor</option>
+                <option value="244" >---- The Fitness Log Cabin</option>
+                <option value="161" >-- Goons With Spoons</option>
+                <option value="167" >-- Post Your Favorite (or Request)</option>
+                <option value="91" >-- Automotive Insanity</option>
+                <option value="236" >---- Cycle Asylum</option>
+                <option value="124" >-- Pet Island</option>
+                <option value="132" >-- The Firing Range</option>
+                <option value="90" >-- The Crackhead Clubhouse</option>
+                <option value="218" >-- Goons in Platoons</option>
+                <option value="152" > The Finer Arts</option>
+                <option value="31" >-- Creative Convention</option>
+                <option value="210" >---- DIY &amp; Hobbies</option>
+                <option value="247" >---- The Dorkroom</option>
+                <option value="151" >-- Cinema Discusso</option>
+                <option value="133" >---- The Film Dump</option>
+                <option value="182" >-- The Book Barn</option>
+                <option value="150" >-- No Music Discussion</option>
+                <option value="104" >---- Musician's Lounge</option>
+                <option value="130" >-- The TV IV</option>
+                <option value="144" >-- Batman's Shameful Secret</option>
+                <option value="27" >-- ADTRW</option>
+                <option value="215" >-- Entertainment, Weakly</option>
+                <option value="255" >-- Rapidly Going Deaf</option>
+                <option value="153" > The Community</option>
+                <option value="61" >-- SA-Mart</option>
+                <option value="77" >---- Feedback &amp; Discussion</option>
+                <option value="85" >---- Coupons &amp; Deals</option>
+                <option value="43" >-- Goon Meets</option>
+                <option value="241" >-- LAN: Your City Sucks - Regional Discussion</option>
+                <option value="188" >-- Questions, Comments, Suggestions? - Read the stickies first!</option>
+                <option value="49" > Archives</option>
+                <option value="21" >-- Comedy Goldmine</option>
+                <option value="115" >---- FYAD Goldmine</option>
+                <option value="222" >---- LF Goldmine</option>
+                <option value="229" >---- YCS Goldmine</option>
+                <option value="25" >-- Comedy Gas Chamber</option>
+                <option value="204" >-- Helldump Success Stories</option>
+              </select>
+              <input type="image" src="http://fi.somethingawful.com/images/go.gif">
+</form>
+
+
+        <div class="subscribe" style="display:none" id="bookmark_link">
+          <a>Bookmark this thread</a>
+        </div>
+
+      </div>
+      <!-- #content -->
+
+      <div id="copyright">
+        Powered by: vBulletin Version 2.2.9 (<a href="/CHANGES">SAVB-2.0.15</a>)<br>
+          Copyright &copy;2000, 2001, Jelsoft Enterprises Limited.<br>
+            Copyright &copy;2011, Something Awful LLC<br>
+	</div>
+
+    </div>
+    <!-- #container -->
+
+    <script type="text/javascript">
+      // quantcast
+      _qoptions = { qacct:"p-82vTvmw-enlng" };
+
+      try {
+      if(document.location.hostname != 'forums.somethingawful.com')
+      throw undefined;
+
+      $(document).ready(function() {
+      var qcUrl = 'http://edge.quantserve.com/quant.js';
+      jQuery.getScript(qcUrl);
+
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      var gaUrl = gaJsHost + 'google-analytics.com/ga.js';
+      jQuery.getScript(gaUrl, function() {
+      var pageTracker = _gat._getTracker("UA-3064978-2");
+      pageTracker._initData();
+      pageTracker._trackPageview();
+      });
+      });
+      } catch(e) {};
+
+      // indie
+      try {
+      if(document.location.hostname != 'forums.somethingawful.com')
+      throw undefined;
+
+      $(document).ready(function() {
+      var ic_element = document.createElement('script');
+      ic_element.type = 'text/javascript';
+      ic_element.async = true;
+      ic_element.id = 'ic_annonymous_pixel';
+      ic_element.src = 'http://pixel.indieclick.com/annonymous/domain/somethingawful.com/reach/script_ic.js';
+      var ic_script = document.getElementsByTagName('script')[0];
+      ic_script.parentNode.insertBefore(ic_element, ic_script);
+      });
+      } catch(e) {};
+    </script>
+    <noscript>
+      <img src="http://pixel.quantserve.com/pixel/p-82vTvmw-enlng.gif" style="display:none;" border="0" height="1" width="1" alt="Quantcast">
+    </noscript>
+
+    <!-- PLEASE DO NOT REMOVE -->
+    <ol id="debug" style="display:none">
+      <li>&nbsp;
+    </ol>
+
+  </body>
+</html>

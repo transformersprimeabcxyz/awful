@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C2F35F5C-AB3B-4792-892C-794286CEDD59}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Awful.Core</RootNamespace>
+    <AssemblyName>Awful.WP7.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\main\packages\HtmlAgilityPack.1.4.6\lib\sl4-windowsphone71\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="KollaSoft.WP7, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\main\lib\KollaSoft.WP7.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="system.data.linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="mscorlib.extensions" />
+    <Reference Include="System.Xml.XPath">
+      <HintPath>C:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Xml.XPath.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AwfulApplicationSettings.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Data\AbstractDataContext.cs" />
+    <Compile Include="Data\AwfulDataContext.cs" />
+    <Compile Include="Data\AwfulForumsDAO.cs" />
+    <Compile Include="Data\AwfulProfileDAO.cs" />
+    <Compile Include="Data\DatabaseExtensions.cs" />
+    <Compile Include="Event\EventArgs.cs" />
+    <Compile Include="Event\Logger.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Messages.cs" />
+    <Compile Include="Models\Forum\AwfulControlPanel.cs" />
+    <Compile Include="Models\Forum\AwfulForumFavorite.cs" />
+    <Compile Include="Models\Forum\AwfulProfile.cs" />
+    <Compile Include="Models\Forum\AwfulSmiley.cs" />
+    <Compile Include="Models\Forum\AwfulThreadBookmarks.cs" />
+    <Compile Include="Models\Forum\AwfulThreadPreviewPage.cs" />
+    <Compile Include="Models\Forum\AwfulUserFilteredThreadPage.cs" />
+    <Compile Include="Models\Factory\AbstractPageFactory.cs" />
+    <Compile Include="Models\Factory\AwfulForumFactory.cs" />
+    <Compile Include="Models\Factory\AwfulForumPageFactory.cs" />
+    <Compile Include="Models\Factory\AwfulPostFactory.cs" />
+    <Compile Include="Models\Factory\AwfulSmileyFactory.cs" />
+    <Compile Include="Models\Factory\AwfulThreadFactory.cs" />
+    <Compile Include="Models\Factory\AwfulThreadPageFactory.cs" />
+    <Compile Include="Models\Factory\AwfulThreadPageHtmlFactory.cs" />
+    <Compile Include="Models\Factory\Interfaces\AsynchronousPageFactory.cs" />
+    <Compile Include="Models\Factory\Interfaces\PageFactory.cs" />
+    <Compile Include="Models\Interfaces\ColorProfile.cs" />
+    <Compile Include="Models\Interfaces\ForumData.cs" />
+    <Compile Include="Models\Interfaces\ActionResult.cs" />
+    <Compile Include="Models\Factory\Interfaces\Factory.cs" />
+    <Compile Include="Models\Interfaces\PostData.cs" />
+    <Compile Include="Models\Interfaces\UserProfile.cs" />
+    <Compile Include="Models\Interfaces\Refreshable.cs" />
+    <Compile Include="Models\Interfaces\ThreadData.cs" />
+    <Compile Include="Models\Interfaces\WebBrowseable.cs" />
+    <Compile Include="Models\Forum\RatingsItem.cs" />
+    <Compile Include="Models\Forum\AwfulForum.cs" />
+    <Compile Include="Models\Forum\AwfulForumPage.cs" />
+    <Compile Include="Models\Forum\AwfulPost.cs" />
+    <Compile Include="Models\Forum\AwfulThread.cs" />
+    <Compile Include="Models\Forum\AwfulTag.cs" />
+    <Compile Include="Models\Forum\AwfulThreadPage.cs" />
+    <Compile Include="Models\Forum\AbstractThreadPreviewPage.cs" />
+    <Compile Include="Models\Forum\AwfulSubforum.cs" />
+    <Compile Include="Models\Messaging\AwfulEditFolderRequest.cs" />
+    <Compile Include="Models\Messaging\AwfulPrivateMessage.cs" />
+    <Compile Include="Models\Messaging\AwfulPrivateMessageFolder.cs" />
+    <Compile Include="Models\Messaging\AwfulPrivateMessageRequest.cs" />
+    <Compile Include="Models\Messaging\Interfaces\IPrivateMessage.cs" />
+    <Compile Include="Models\Messaging\Interfaces\IPrivateMessageFolder.cs" />
+    <Compile Include="Models\Messaging\Interfaces\IPrivateMessageFolderRequest.cs" />
+    <Compile Include="Models\Messaging\Interfaces\IPrivateMessageIcon.cs" />
+    <Compile Include="Models\Messaging\Interfaces\IPrivateMessageRequest.cs" />
+    <Compile Include="Models\Messaging\Interfaces\IPrivateMessagingService.cs" />
+    <Compile Include="Models\Messaging\PrivateMessageStatus.cs" />
+    <Compile Include="Models\Forum\AwfulAuthToken.cs" />
+    <Compile Include="Models\Sort\SortForumByName.cs" />
+    <Compile Include="Models\Sort\SortThreadByNewPostCount.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AwfulAuthenticationService.cs" />
+    <Compile Include="Services\AwfulForumsService.cs" />
+    <Compile Include="Services\AwfulPrivateMessageService.cs" />
+    <Compile Include="Services\AwfulServiceManager.cs" />
+    <Compile Include="Services\AwfulSmileyService.cs" />
+    <Compile Include="Services\AwfulThreadCreatorService.cs" />
+    <Compile Include="Services\ThreadBookmarkService.cs" />
+    <Compile Include="Services\ThreadReplyService.cs" />
+    <Compile Include="Services\ThreadService.cs" />
+    <Compile Include="Web\AwfulAuthenticator.cs" />
+    <Compile Include="Web\AwfulWebRequest.cs" />
+    <Compile Include="Web\Parsers\AwfulForumParser.cs" />
+    <Compile Include="Web\Parsers\AwfulIndexParser.cs" />
+    <Compile Include="Web\Parsers\AwfulPostWebParser.cs" />
+    <Compile Include="Web\Parsers\AwfulPrivateMessageParser.cs" />
+    <Compile Include="Web\Parsers\AwfulThreadParser.cs" />
+    <Compile Include="Web\WebGet.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

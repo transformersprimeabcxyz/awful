@@ -1,0 +1,108 @@
+﻿
+
+body {
+    font-family:'Segoe WP';
+    
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+table {
+ 
+}
+
+pre {
+    white-space:pre;
+    white-space:pre-wrap;
+    white-space:pre-line;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word;
+    width:200px;
+    font-family:'Segoe WP';
+    font-size:medium;
+}
+
+td {
+    padding-bottom:24px;
+}
+		
+.text_title3style {
+    font-family:'Segoe WP SemiLight';
+	font-size:x-large;
+	text-align:left;
+	margin-left:12px;
+	color:white;
+}
+	
+.text_subtlestyle {
+    font-family:'Segoe WP';
+	font-size:small;
+	text-align:left;
+	margin-left:12px;
+	color:silver;	
+}
+	
+.post_header {
+    height:48px;
+	position:relative;
+}
+	
+.post_header_text {
+    position:absolute;
+	left:48px;
+	bottom:0;
+}
+
+.post_header_text_noicon {
+    position:absolute;
+    left:0;
+    bottom:0;
+    margin-left:-12px;
+}
+	
+.post_icon {
+    position:absolute;
+	left:0;
+	height:48px;
+	width:48px;
+	border:1px silver solid;
+}
+
+.post_content {
+    margin-top:24px;
+}
+
+.quote-author {
+    font-family:'Segoe WP Light';
+    font-size:large;
+	border-left-color:#A0A0A0;
+	border-right-color:#C0C0C0;
+	border-top-color:#A0A0A0;
+	border-bottom-color:#C0C0C0;
+	padding: 1px;
+	margin-bottom:-16px;
+}
+
+.quote-author-grid {
+    text-align:right; 
+}
+
+.quote-text {
+    font-family:'Segoe WP Semibold';
+    font-size:100%;
+}
+
+.bbc-block {
+    border-top:1px rgb(153, 153, 153) solid;
+    border-top-width:1px;
+    border-top-color:rgb(153, 153, 153);
+    border-top-style:solid;
+	border-bottom:1px rgb(153, 153, 153) solid;
+    border-bottom-width:1px;
+    border-bottom-color:rgb(153, 153, 153);
+    border-bottom-style:solid; 
+    max-width:275px;
+}
+

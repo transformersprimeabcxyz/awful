@@ -1,0 +1,353 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+             xmlns:local="clr-namespace:Awful"
+             xmlns:telerikDataControls="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Data"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives"
+             xmlns:Awful_Models="clr-namespace:Awful.Models"
+             xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+             xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Core"
+             xmlns:kollasoft="clr-namespace:KollaSoft;assembly=KollaSoft.WP7"
+             mc:Ignorable="d"
+             x:Class="Awful.VerticalThreadViewer"
+             d:DesignWidth="480"
+             d:DesignHeight="800">
+			 
+			 
+    <UserControl.Resources>
+        <Storyboard x:Name="ThreadTitleFlip">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)"
+                                           Storyboard.TargetName="ThreadTitleLabel">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2"
+                                      Value="180" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4"
+                                      Value="360" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="ShrinkAndDropContent">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)"
+                                           Storyboard.TargetName="ThreadContentView">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4"
+                                      Value="0.4" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)"
+                                           Storyboard.TargetName="ThreadContentView">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4"
+                                      Value="0.4" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
+                                           Storyboard.TargetName="ThreadContentView">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4"
+                                      Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                                           Storyboard.TargetName="ThreadContentView">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseIn" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4"
+                                      Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseIn" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6"
+                                      Value="525">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseIn" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <DataTemplate x:Key="JumpListItemTemplate">
+            <Grid CacheMode="BitmapCache"
+                  Margin="0,0,0,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Border x:Name="PostNumberBorder"
+                        Background="{Binding HasSeen, ConverterParameter=Background, Converter={StaticResource SAPostManager}, Mode=OneWay}"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Width="90"
+                        Height="90"
+                        BorderThickness="2">
+                    <Border.BorderBrush>
+                        <SolidColorBrush Color="{StaticResource PhoneBorderColor}" />
+                    </Border.BorderBrush>
+                    <TextBlock x:Name="PostNumberLabel"
+                               FontSize="{StaticResource PhoneFontSizeExtraLarge}"
+                               FontFamily="{StaticResource PhoneFontFamilySemiLight}"
+                               Text="{Binding PostNumber}"
+                               Style="{StaticResource PhoneTextTitle3Style}"
+                               Margin="0"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" />
+                </Border>
+                <StackPanel Grid.Column="1"
+                            Margin="12,0,0,0"
+                            VerticalAlignment="Center">
+                    <TextBlock x:Name="PostAuthorLabel"
+                               TextWrapping="Wrap"
+                               Text="{Binding PostAuthor}"
+                               Style="{StaticResource PhoneTextLargeStyle}">
+						<TextBlock.Foreground>
+							<SolidColorBrush Color="{Binding ConverterParameter=ADMIN, Converter={StaticResource SAPostManager}, Mode=OneWay}" />
+						</TextBlock.Foreground>
+                    </TextBlock>
+                    <TextBlock x:Name="PostDateLabel"
+                               TextWrapping="Wrap"
+                               Text="{Binding PostDate, ConverterParameter=MM/dd/yyyy HH:mm, Converter={StaticResource DateTimeFormatter}}"
+                               Style="{StaticResource PhoneTextSubtleStyle}">
+						<TextBlock.Foreground>
+							<SolidColorBrush Color="{StaticResource PhoneForegroundColor}" />
+						</TextBlock.Foreground>
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <Awful_Models:RatingsSource x:Key="RatingsSource">
+            <Awful_Models:RatingsSource.Ratings>
+            	<Awful_Models:RatingsItem Value="1"
+            		Color="#FFA5B667" />
+            	<Awful_Models:RatingsItem Value="2"
+            		Color="#FFB69363" />
+            	<Awful_Models:RatingsItem Value="3"
+            		Color="#FFF4AD09" />
+            	<Awful_Models:RatingsItem Value="4"
+            		Color="#FFFFDD15" />
+            	<Awful_Models:RatingsItem Value="5"
+            		Color="gold" />
+            </Awful_Models:RatingsSource.Ratings>
+        </Awful_Models:RatingsSource>
+        <LinearGradientBrush x:Key="DarkGradientBottom" EndPoint="0.5,1" StartPoint="0.5,0">
+        	<GradientStop Offset="1" Color="Black"/>
+        	<GradientStop Offset="0"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="LightGradientBottom" EndPoint="0.5,1" StartPoint="0.5,0">
+        	<GradientStop Offset="1" Color="White"/>
+        	<GradientStop Offset="0" Color="Transparent"/>
+        </LinearGradientBrush>
+        <Storyboard x:Name="ContentInFromBottom">
+            <DoubleAnimation Duration="0"
+                             To="0"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
+                             Storyboard.TargetName="ThreadContentView"
+                             d:IsOptimized="True" />
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                                           Storyboard.TargetName="ThreadContentView">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="400" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5"
+                                      Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="ThreadContentView">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5"
+                                      Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)"
+                                           Storyboard.TargetName="ThreadContentView">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5"
+                                      Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)"
+                                           Storyboard.TargetName="ThreadContentView">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5"
+                                      Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <LinearGradientBrush x:Key="DarkGradientTop" EndPoint="0.5,1" StartPoint="0.5,0">
+        	<GradientStop Offset="1"/>
+        	<GradientStop Offset="0" Color="#FF000000"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="LightGradientTop" EndPoint="0.5,1" StartPoint="0.5,0">
+        	<GradientStop Offset="1" Color="Transparent"/>
+        	<GradientStop Offset="0" Color="White"/>
+        </LinearGradientBrush>
+    
+	</UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="{x:Null}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="PageHeaderPanel"
+                    VerticalAlignment="Center"
+                    DoubleTap="PageHeaderPanel_DoubleTap"
+                    Height="64">
+            <TextBlock x:Name="ThreadTitleLabel"
+                       TextWrapping="NoWrap"
+                       Text="{Binding ThreadTitle}"
+                       Style="{StaticResource PhoneTextTitle3Style}">
+				<TextBlock.Projection>
+					<PlaneProjection />
+				</TextBlock.Projection>
+            </TextBlock>
+            <RichTextBox x:Name="ThreadPageLabel">
+                <Paragraph>
+                    <Span FontSize="18">
+                        <Run Text="Page" />
+                        <Run Text=" " />
+                        <Bold>
+                            <Run Text="{Binding CurrentPage}"
+                                 Foreground="{StaticResource PhoneAccentBrush}" />
+                        </Bold>
+                        <Run Text=" " />
+                        <Run Text="of" />
+                        <Run Text=" " />
+                        <Bold>
+                            <Run Text="{Binding TotalPages}"
+                                 Foreground="{StaticResource PhoneAccentBrush}" />
+                        </Bold>
+                    </Span>
+                </Paragraph>
+            </RichTextBox>
+        </StackPanel>
+        <Grid x:Name="ContentPanel"
+              Grid.Row="1">
+            <Grid.Projection>
+                <PlaneProjection />
+            </Grid.Projection>
+            <Grid.RenderTransform>
+                <CompositeTransform />
+            </Grid.RenderTransform>
+     
+            <phone:WebBrowser x:Name="ThreadContentView"
+                              d:LayoutOverrides="Height"
+                              IsScriptEnabled="True"
+                              CacheMode="BitmapCache"
+                              ScriptNotify="ThreadContentView_ScriptNotify"
+                              Navigated="ThreadContentView_Navigated"
+                              RenderTransformOrigin="0.5,0.5"
+                              kollasoft:KSWebBrowserHelper.SuppressPanAndZoom="True"
+							  telerikPrimitives:RadContextMenu.ContextMenu="{Binding Path=Menu, Source={StaticResource MenuProvider}}">
+							  
+                <phone:WebBrowser.RenderTransform>
+                    <CompositeTransform />
+                </phone:WebBrowser.RenderTransform>
+            </phone:WebBrowser>
+
+            <telerikDataControls:RadJumpList x:Name="PostJumpList"
+                                             Margin="0"
+                                             GroupPickerItemTap="PostJumpListItemTap"
+                                             GroupPickerItemTemplate="{StaticResource JumpListItemTemplate}"
+                                             GroupPickerItemsSource="{Binding Posts}"
+                                             ItemsSource="{Binding Posts}"
+                                             EmptyContentDisplayMode="Always">
+                <telerikDataControls:RadJumpList.ItemTemplate>
+                    <DataTemplate>
+                        <Grid />
+                    </DataTemplate>
+                </telerikDataControls:RadJumpList.ItemTemplate>
+                <telerikDataControls:RadJumpList.EmptyContent>
+                    <telerikPrimitives:RadBusyIndicator Foreground="{StaticResource PhoneAccentBrush}"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center"
+                                                        IsRunning="{Binding IsPageLoading}" />
+                </telerikDataControls:RadJumpList.EmptyContent>
+            </telerikDataControls:RadJumpList>
+            <telerikPrimitives:RadWindow x:Name="ReplyWindow"
+                                              IsFullScreen="True"
+                                              HorizontalContentAlignment="Stretch"
+                                              VerticalContentAlignment="Stretch"
+                                              WindowSizeMode="AutoSize">
+                <telerikPrimitives:RadWindow.ApplicationBarInfo>
+                    <telerikPrimitives:ApplicationBarInfo ButtonClick="ReplyWindow_ButtonClick">
+                        <telerikPrimitives:ApplicationBarButton Text="send"
+                                                                IconUri="/icons/appbar.check.rest.png" />
+                        <telerikPrimitives:ApplicationBarButton Text="cancel"
+                                                                IconUri="/icons/appbar.close.rest.png" />
+                        <telerikPrimitives:ApplicationBarButton Text="hide"
+                                                                IconUri="/icons/appbar.download.rest.png" />
+                    </telerikPrimitives:ApplicationBarInfo>
+                </telerikPrimitives:RadWindow.ApplicationBarInfo>
+				
+                <Grid x:Name="WindowRoot">
+                	<local:ReplyBoxControl x:Name="ReplyBox" Margin="0"/>
+                </Grid>
+            </telerikPrimitives:RadWindow>
+            
+			<telerikPrimitives:RadWindow x:Name="RatingWindow"
+                                              PlacementTarget="{Binding ElementName=ContentPanel}"
+                                              WindowSizeMode="FitToPlacementTarget"
+                                              Margin="12">
+                <Grid x:Name="RatingsWindowRoot">
+                    <ListBox x:Name="RatingsListBox"
+                             HorizontalAlignment="Center"
+                             toolkit:TiltEffect.IsTiltEnabled="True"
+                             ItemsSource="{Binding Ratings}"
+                             Background="{StaticResource PhoneBackgroundBrush}"
+                             Padding="20"
+                             DataContext="{Binding Source={StaticResource RatingsSource}}"
+                             HorizontalContentAlignment="Stretch"
+                             SelectionChanged="RatingListBox_SelectionChanged">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border x:Name="RatingsBorder"
+                                        d:DataContext="{Binding Ratings.[0], Source={StaticResource SampleRatingViewModel}}"
+                                        telerik:InteractionEffectManager.IsInteractionEnabled="True"
+                                        d:DesignWidth="300"
+                                        BorderThickness="8"
+                                        Height="100"
+                                        Margin="20,0,20,20"
+                                        MinWidth="300">
+                                    <Border.BorderBrush>
+                                        <SolidColorBrush Color="{StaticResource PhoneBorderColor}" />
+                                    </Border.BorderBrush>
+                                    <Border.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1"
+                                                             StartPoint="0.5,0">
+                                            <GradientStop Color="{Binding Color}"
+                                                          Offset="0.596" />
+                                            <GradientStop Color="White"
+                                                          Offset="1" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                    <TextBlock x:Name="RatingsValue"
+                                               TextWrapping="NoWrap"
+                                               Text="{Binding Value}"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"
+                                               Style="{StaticResource PhoneTextTitle1Style}"
+                                               Foreground="Black"
+                                               FontFamily="Segoe WP Black" />
+                                </Border>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+
+                <telerikPrimitives:RadWindow.ApplicationBarInfo>
+                    <telerikPrimitives:ApplicationBarInfo ButtonClick="RatingsAppBar_ButtonClick">
+                        <telerikPrimitives:ApplicationBarButton IconUri="/icons/appbar.close.rest.png"
+                                                                Text="cancel" />
+                    </telerikPrimitives:ApplicationBarInfo>
+                </telerikPrimitives:RadWindow.ApplicationBarInfo>
+
+            </telerikPrimitives:RadWindow>
+            <Border x:Name="TransparentBorderTop" BorderThickness="0" Height="28" VerticalAlignment="Top" Margin="0,-2,0,0" Background="{StaticResource DarkGradientTop}"/>
+            <Border x:Name="TransparentBorderBottom" BorderThickness="0" Height="28" VerticalAlignment="Bottom" Margin="0" Background="{StaticResource DarkGradientTop}"/>
+        </Grid>
+    </Grid>
+</UserControl>

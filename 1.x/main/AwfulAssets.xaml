@@ -1,0 +1,214 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:System="clr-namespace:System;assembly=mscorlib" 
+	xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives" 
+	xmlns:loopinglist="clr-namespace:Telerik.Windows.Controls.LoopingList;assembly=Telerik.Windows.Controls.Primitives" xmlns:telerik1="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input" xmlns:telerik2="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Core" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+	<!-- Resource dictionary entries should be defined here. --><!-- These values correspond to the dot size and dot fill sizes for the page tabs -->
+	<System:Double x:Key="dotSize">28</System:Double>
+	<System:Double x:Key="dotFill">12</System:Double>
+	<System:Double x:Key="dotStroke">8</System:Double>
+	<System:Double x:Key="defaultButtonHeight">72</System:Double>
+	<!-- This template is used for unselected pages -->
+	<DataTemplate x:Key="dot">
+		<Border Width="{StaticResource dotSize}" Height="{StaticResource dotSize}" Background="Transparent">
+			<Ellipse Stroke="{StaticResource PhoneAccentBrush}"
+				StrokeThickness="2" Height="{StaticResource dotStroke}" Width="{StaticResource dotStroke}"
+				HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		</Border>
+	</DataTemplate>
+	<!-- This template is used for selected pages -->
+	<DataTemplate x:Key="selectedDot">
+		<Border Width="{StaticResource dotSize}" Height="{StaticResource dotSize}" Background="Transparent">
+			<Ellipse Fill="{StaticResource PhoneAccentBrush}"
+				Height="{StaticResource dotFill}" Width="{StaticResource dotFill}"
+				HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		</Border>
+	</DataTemplate>
+	<System:Double x:Key="DefaultBorderSize">3</System:Double>
+	<DataTemplate x:Key="optionButtonTemplate"><Border Height="{StaticResource defaultButtonHeight}" BorderThickness="0,0,0,3" BorderBrush="{StaticResource PhoneBackgroundBrush}">
+			<TextBlock Text="{Binding Text}" Style="{StaticResource PhoneTextTitle3Style}" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" />
+		</Border></DataTemplate>
+	<Style x:Key="DefaultLoopingStyle" TargetType="telerik:RadLoopingList">
+		<Setter Property="Background" Value="#00ffffff"/>
+		<Setter Property="ItemTemplate">
+			<Setter.Value>
+				<DataTemplate>
+					<TextBlock Text="{Binding Text}"/>
+				</DataTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="telerik:RadLoopingList">
+					<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" IsHitTestVisible="True" Margin="{TemplateBinding Padding}">
+						<loopinglist:LoopingPanel x:Name="itemsPanel" HorizontalAlignment="Center"/>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	
+	  <Style TargetType="loopinglist:LoopingListItem" x:Key="loopingListItemStyle">
+            <Setter Property="CacheMode" Value="BitmapCache"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="loopinglist:LoopingListItem">
+                        <Border x:Name="root" 
+                                BorderThickness="0" 
+                                Margin="0"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentControl x:Name="contentPresenter" 
+										Content="{TemplateBinding Content}" 
+										ContentTemplate="{TemplateBinding ContentTemplate}"
+                                        VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" 
+                                        HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" DataContext="{TemplateBinding DataContext}"
+                                        Padding="{TemplateBinding Padding}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+	<Style x:Key="HeaderStyle" TargetType="ContentControl">
+		<Setter Property="Foreground" Value="{StaticResource PhoneSubtleBrush}"/>
+		<Setter Property="FontSize" Value="{StaticResource PhoneFontSizeNormal}"/>
+		<Setter Property="Padding" Value="0,0,0,8"/>
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+	</Style>
+	<Style x:Key="PopupHeaderStyle" TargetType="ContentControl">
+		<Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}"/>
+		<Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiBold}"/>
+		<Setter Property="Margin" Value="24,55,0,27"/>
+		<Setter Property="HorizontalContentAlignment" Value="Left"/>
+	</Style>
+	<Style x:Key="RadListPickerOptionStyle" TargetType="telerik1:RadListPicker">
+		<Setter Property="HorizontalAlignment" Value="Stretch"/>
+		<Setter Property="VerticalAlignment" Value="Top"/>
+		<Setter Property="HeaderStyle" Value="{StaticResource HeaderStyle}"/>
+		<Setter Property="Background" Value="{StaticResource PhoneTextBoxBrush}"/>
+		<Setter Property="Foreground" Value="{StaticResource PhoneTextBoxForegroundBrush}"/>
+		<Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMediumLarge}"/>
+		<Setter Property="PopupHeaderStyle" Value="{StaticResource PopupHeaderStyle}"/>
+		<Setter Property="Margin" Value="{StaticResource PhoneTouchTargetOverhang}"/>
+		<Setter Property="MinHeight" Value="44"/>
+		<Setter Property="BorderThickness" Value="2"/>
+		<Setter Property="BorderBrush" Value="{StaticResource PhoneTextBoxBrush}"/>
+		<Setter Property="PopupOpenAnimation">
+			<Setter.Value>
+				<telerik2:RadTileAnimation Duration="0:0:.2" InitialDelay="0:0:.08" IsTranslationEnabled="False" InOutAnimationMode="In" PerspectiveAngleY="0" PerspectiveAngleX="90" SequentialMode="FirstToLast"/>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="PopupCloseAnimation">
+			<Setter.Value>
+				<telerik2:RadTileAnimation Duration="0:0:.2" IsTranslationEnabled="False" InOutAnimationMode="Out" PerspectiveAngleY="0" PerspectiveAngleX="90" SequentialMode="FirstToLast" SequentialItemDelay="0"/>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="telerik1:RadListPicker">
+					<Grid x:Name="LayoutRoot">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualState x:Name="Normal"/>
+								<VisualState x:Name="Expanded">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Background" Storyboard.TargetName="border">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneTextBoxEditBackgroundColor}"/>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="border">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneTextBoxEditBorderBrush}"/>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<ContentControl x:Name="HeaderPresenter" CacheMode="BitmapCache" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" Grid.Row="0" Style="{TemplateBinding HeaderStyle}" Visibility="Collapsed"/>
+						<Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CacheMode="BitmapCache" Grid.Row="1">
+							<Grid x:Name="mainLayout">
+								<telerik1:RadListPickerItem x:Name="PopupModeLabel" ContentTemplate="{TemplateBinding ItemTemplate}" HorizontalAlignment="Stretch" MinHeight="{TemplateBinding MinHeight}" Style="{TemplateBinding ItemStyle}" VerticalAlignment="Stretch"/>
+								<Canvas x:Name="ItemsParent"/>
+							</Grid>
+						</Border>
+						<telerik:RadWindow x:Name="Popup" CloseAnimation="{TemplateBinding PopupCloseAnimation}" IsFullScreen="True" IsAnimationEnabled="{TemplateBinding IsAnimationEnabled}" OpenAnimation="{TemplateBinding PopupOpenAnimation}">
+							<telerik:RadSelector x:Name="PopupList" DisplayMemberPath="{TemplateBinding DisplayMemberPath}" HeaderTemplate="{TemplateBinding PopupHeaderTemplate}" HeaderStyle="{TemplateBinding PopupHeaderStyle}" Header="{TemplateBinding PopupHeader}" ItemStyle="{TemplateBinding PopupItemStyle}" Style="{TemplateBinding PopupStyle}">
+								<telerik:RadSelector.ItemsPanel>
+									<ItemsPanelTemplate>
+										<VirtualizingStackPanel/>
+									</ItemsPanelTemplate>
+								</telerik:RadSelector.ItemsPanel>
+							</telerik:RadSelector>
+						</telerik:RadWindow>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="PopupItemStyle">
+			<Setter.Value>
+				<Style TargetType="telerik:SelectorItem">
+					<Setter Property="Margin" Value="16,12,16,12"/>
+				</Style>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="PopupStyle">
+			<Setter.Value>
+				<Style TargetType="telerik:RadSelector">
+					<Setter Property="FontSize" Value="{StaticResource PhoneFontSizeExtraLarge}"/>
+					<Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiLight}"/>
+					<Setter Property="Background" Value="{StaticResource PhoneChromeBrush}"/>
+					<Setter Property="HorizontalAlignment" Value="Stretch"/>
+					<Setter Property="VerticalAlignment" Value="Stretch"/>
+				</Style>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="AccentBackgroundSelectedStyle" TargetType="ListBoxItem">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="BorderThickness" Value="0"/>
+		<Setter Property="BorderBrush" Value="Transparent"/>
+		<Setter Property="Padding" Value="0"/>
+		<Setter Property="HorizontalContentAlignment" Value="Left"/>
+		<Setter Property="VerticalContentAlignment" Value="Top"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ListBoxItem">
+					<Grid>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualState x:Name="Normal"/>
+								<VisualState x:Name="MouseOver"/>
+								<VisualState x:Name="Disabled">
+									<Storyboard>
+										<DoubleAnimation Duration="0" To=".5" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="ContentContainer"/>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="SelectionStates">
+								<VisualStateGroup.Transitions>
+									<VisualTransition From="Selected" GeneratedDuration="0:0:0.4"/>
+								</VisualStateGroup.Transitions>
+								<VisualState x:Name="Unselected"/>
+								<VisualState x:Name="Selected">
+									<Storyboard>
+										<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="backgroundBorder" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<Border x:Name="backgroundBorder" BorderBrush="Black" Margin="0" Background="{StaticResource PhoneAccentBrush}" Opacity="0"/>
+						<Border x:Name="LayoutRoot" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}" d:LayoutOverrides="Width, Height" Canvas.ZIndex="10">
+							<ContentControl x:Name="ContentContainer" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

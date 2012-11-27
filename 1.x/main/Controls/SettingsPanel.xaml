@@ -1,0 +1,281 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives"
+             xmlns:local="clr-namespace:Awful"
+             xmlns:telerikInput="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input"
+             mc:Ignorable="d"
+             x:Class="Awful.SettingsPanel"
+             d:DesignWidth="480"
+             d:DesignHeight="800">
+    <UserControl.Resources>
+        <local:ThreadViewStyleOptionFormatter x:Key="ViewStyleOption" />
+        <DataTemplate x:Key="SettingsHeaderTemplate">
+            <Grid>
+                <TextBlock Margin="12,0,0,0"
+                           TextWrapping="Wrap"
+                           Text="{Binding}"
+                           d:LayoutOverrides="Width, Height"
+                           Style="{StaticResource PhoneTextSubtleStyle}" />
+            </Grid>
+        </DataTemplate>
+        <Style x:Key="SettingsHeaderStyle"
+               TargetType="ContentControl">
+            <Setter Property="HorizontalContentAlignment"
+                    Value="Left" />
+        </Style>
+    </UserControl.Resources>
+
+  <Grid x:Name="LayoutRoot"
+        Background="Transparent">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <StackPanel x:Name="MainSettingsPanel">
+      <StackPanel x:Name="LockScreenSettings"
+                  Height="100">
+        <CheckBox Content="run under lock screen"
+                  Click="LockScreen_Click"
+                  IsChecked="{Binding Settings.RunUnderLockScreen, Mode=TwoWay}" />
+      </StackPanel>
+
+      <StackPanel x:Name="HideSystemTraySettings"
+                  Height="100">
+        <CheckBox Content="hide system tray"
+                  IsChecked="{Binding Settings.HideSystemTray, Mode=TwoWay}"
+                  Click="HideSysTray_Click" />
+      </StackPanel>
+
+      <StackPanel x:Name="PostTextColor"
+                  Margin="{StaticResource PhoneTouchTargetOverhang}">
+        <TextBlock x:Name="TextColorLabel"
+                   TextWrapping="Wrap"
+                   Text="post text color"
+                   Style="{StaticResource PhoneTextSubtleStyle}"
+                   Margin="0,0,12,-12"
+                   IsHitTestVisible="False" />
+        <Slider x:Name="TextColorSlider"
+                Padding="0"
+                Margin="-12,0"
+                Value="{Binding Settings.PostTextColorSliderValue, Mode=TwoWay}"
+                LargeChange="0.2"
+                SmallChange="0.05"
+                Maximum="1" />
+        <Grid x:Name="TextColorLabelGrid"
+              Margin="0,-40,0,0"
+              IsHitTestVisible="False">
+          <TextBlock x:Name="DarkerLabel"
+                     HorizontalAlignment="Left"
+                     TextWrapping="Wrap"
+                     Text="darker"
+                     VerticalAlignment="Top" />
+          <TextBlock x:Name="Lighter"
+                     HorizontalAlignment="Right"
+                     TextWrapping="Wrap"
+                     Text="lighter"
+                     VerticalAlignment="Top" />
+        </Grid>
+        <TextBlock x:Name="TextColorSampleText"
+                   TextWrapping="Wrap"
+                   Text="Here is some sample text."
+                   Margin="0,-12,0,0"
+                   Style="{StaticResource PhoneTextTitle3Style}"
+                   HorizontalAlignment="Center">
+					<TextBlock.Foreground>
+						<SolidColorBrush Color="{Binding CurrentTheme.PostForeground, Source={StaticResource LookAndFeel}}" />
+					</TextBlock.Foreground>
+        </TextBlock>
+      </StackPanel>
+
+      <Grid x:Name="PostTextSizePanel"
+            VerticalAlignment="Center"
+            Margin="{StaticResource PhoneTouchTargetOverhang}">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1.5*" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <telerikInput:RadListPicker x:Name="PostTextSizeDropdown"
+                                    Margin="0"
+                                    Header="post text size"
+                                    ItemsSource="{Binding TextSizes}"
+                                    SelectedItem="{Binding SelectedTextSize, Mode=TwoWay}"
+                                    d:LayoutOverrides="Height"
+                                    Grid.ColumnSpan="2" />
+        <TextBlock x:Name="SampleTextLabel"
+                   Grid.Column="1"
+                   TextWrapping="NoWrap"
+                   FontSize="{Binding SampleTextSize}"
+                   Text="Sample Text"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,12"
+                   FontFamily="Segoe WP SemiLight"
+                   Visibility="Collapsed" />
+      </Grid>
+
+      <Grid x:Name="StartingViewPanel"
+            Margin="{StaticResource PhoneTouchTargetOverhang}">
+        <telerikInput:RadListPicker x:Name="StartingViewListPicker"
+                                    Margin="0"
+                                    d:LayoutOverrides="Height"
+                                    Header="display on startup"
+                                    ItemsSource="{Binding StartupViewPresets}"
+                                    SelectedIndex="{Binding Settings.MainMenuStartingIndex, Mode=TwoWay}"
+                                    Tap="SettingsPicker_Tap" />
+      </Grid>
+
+      <StackPanel x:Name="ForumGroupPanel"
+                  Margin="{StaticResource PhoneTouchTargetOverhang}"
+                  MinHeight="100">
+        <telerikInput:RadListPicker x:Name="ForumGroupPicker"
+                                    Margin="0"
+                                    d:LayoutOverrides="Height"
+                                    Header="forum grouping"
+                                    ItemsSource="{Binding ForumGroups}"
+                                    SelectedItem="{Binding SelectedForumGroup, Mode=TwoWay}" />
+      </StackPanel>
+
+      <StackPanel x:Name="ThreadViewStylePanel"
+                  Margin="{StaticResource PhoneTouchTargetOverhang}"
+                  Visibility="Collapsed"
+                  MinHeight="100">
+        <telerikInput:RadListPicker x:Name="ThreadStyleListPicker"
+                                    Margin="0"
+                                    Visibility="Collapsed"
+                                    d:LayoutOverrides="Height"
+                                    Header="thread view style"
+                                    ItemsSource="{Binding ViewStyles}"
+                                    SelectedItem="{Binding SelectedViewStyle, Mode=TwoWay}">
+          <telerikInput:RadListPicker.ItemTemplate>
+            <DataTemplate>
+              <TextBlock Text="{Binding Converter={StaticResource ViewStyleOption}}" />
+            </DataTemplate>
+          </telerikInput:RadListPicker.ItemTemplate>
+        </telerikInput:RadListPicker>
+      </StackPanel>
+
+      <StackPanel x:Name="PageSwipeTogglePanel">
+        <telerikPrimitives:RadToggleSwitch x:Name="togglePageSwipeSwitch"
+                                           IsChecked="{Binding IsPageSwipeEnabled, Mode=TwoWay}"
+                                           Header="page swipe navigation"
+                                           Margin="{StaticResource PhoneTouchTargetOverhang}" />
+        <StackPanel x:Name="PageSwipePanel"
+                    MinHeight="100"
+                    Margin="{StaticResource PhoneTouchTargetOverhang}"
+                    Visibility="{Binding IsChecked, Converter={StaticResource BoolToVisibility}, ElementName=togglePageSwipeSwitch}">
+          <TextBlock TextWrapping="Wrap"
+                     Text="page swipe sensitivity"
+                     Style="{StaticResource PhoneTextSubtleStyle}"
+                     Margin="0,0,12,-12"
+                     IsHitTestVisible="False" />
+          <Slider x:Name="PageSwipeSlider"
+                  Padding="0"
+                  Margin="-12,0"
+                  Value="{Binding PageSwipeCurrentValue, Mode=TwoWay}"
+                  LargeChange="{Binding PageSwipeLargeStep}"
+                  SmallChange="{Binding PageSwipeSmallStep}"
+                  Maximum="{Binding PageSwipeMaxValue}"
+                  Minimum="{Binding PageSwipeMinValue}" />
+          <Grid x:Name="pageSwipeSliderLabels"
+                Margin="0,-40,0,0"
+                IsHitTestVisible="False">
+            <TextBlock HorizontalAlignment="Left"
+                       TextWrapping="Wrap"
+                       Text="easier"
+                       VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Right"
+                       TextWrapping="Wrap"
+                       Text="harder"
+                       VerticalAlignment="Top" />
+          </Grid>
+        </StackPanel>
+      </StackPanel>
+
+      <StackPanel x:Name="SmoothScrollTogglePanel"
+                  MinHeight="100"
+                  Margin="{StaticResource PhoneTouchTargetOverhang}">
+        <telerikPrimitives:RadToggleSwitch x:Name="SmoothScrollToggle"
+                                           Margin="0"
+                                           VerticalAlignment="Stretch"
+                                           Header="smooth scrolling (experimental)"
+                                           IsChecked="{Binding Settings.SmoothScrolling, Mode=TwoWay}">
+          <telerikPrimitives:RadToggleSwitch.Foreground>
+            <SolidColorBrush Color="{StaticResource PhoneForegroundColor}" />
+          </telerikPrimitives:RadToggleSwitch.Foreground>
+        </telerikPrimitives:RadToggleSwitch>
+      </StackPanel>
+      <StackPanel x:Name="ContentFilterPanel"
+      	MinHeight="100"
+      	Margin="{StaticResource PhoneTouchTargetOverhang}">
+      	<telerikPrimitives:RadToggleSwitch x:Name="ContentFilterToggle"
+      		Margin="0"
+      		VerticalAlignment="Stretch"
+      		Header="content filter"
+      		IsChecked="{Binding CensorEnabled, Mode=TwoWay}">
+      		<telerikPrimitives:RadToggleSwitch.Foreground>
+      			<SolidColorBrush Color="{StaticResource PhoneForegroundColor}" />
+      		</telerikPrimitives:RadToggleSwitch.Foreground>
+      	</telerikPrimitives:RadToggleSwitch>
+      </StackPanel>
+
+      <StackPanel x:Name="DebugSettingsPanel">
+        <telerikPrimitives:RadToggleSwitch x:Name="DebugToggleSwitch"
+                                           IsChecked="{Binding Settings.LoggingEnabled, Mode=TwoWay}"
+                                           Header="debug mode"/>
+        <StackPanel x:Name="DebugEnabledPanel"
+                    Margin="0"
+                    Orientation="Vertical"
+                    Visibility="{Binding IsChecked, Converter={StaticResource BoolToVisibility}, ElementName=DebugToggleSwitch}">
+          <Button x:Name="SendDebugButton"
+                  Content="send debug..."
+                  Click="SendDebugButton_Click" />
+          <TextBlock x:Name="DebugWarningText"
+                     TextWrapping="Wrap"
+                     Text="Running Awful with debugging enabled may cause a decrease in app performance."
+                     Style="{StaticResource PhoneTextSmallStyle}"
+                     Margin="{StaticResource PhoneHorizontalMargin}" />
+        </StackPanel>
+      </StackPanel>
+    </StackPanel>
+
+    <StackPanel x:Name="StaticButtonPanel"
+                Orientation="Vertical"
+                Grid.Row="1"
+                d:LayoutOverrides="Height"
+                Margin="0,48,0,0"
+                VerticalAlignment="Bottom">
+      <Button x:Name="AboutThisAppButton"
+              Content="about this app..."
+              Tag="about"
+              Click="StaticButtonPanel_Click" />
+      <Button x:Name="ResetSettingsButton"
+              Content="load defaults..."
+              Tag="default"
+              Click="StaticButtonPanel_Click" />
+      <Button x:Name="ClearAccountButton"
+              Content="clear account..."
+              IsEnabled="{Binding Settings.SaveAccount}"
+              Margin="0"
+              Visibility="Collapsed"
+              Background="Red"
+              Tag="clear"
+              Click="StaticButtonPanel_Click" />
+    </StackPanel>
+
+    <telerikPrimitives:RadModalWindow x:Name="AboutWindow"
+                                      Margin="12"
+                                      Grid.RowSpan="2"
+                                      IsClosedOnOutsideTap="True"
+                                      HorizontalContentAlignment="Stretch"
+                                      VerticalContentAlignment="Stretch"
+                                      IsFullScreen="True"
+                                      Placement="CenterCenter">
+      <local:AboutPanel x:Name="AwfulAboutPanel"
+                        HorizontalContentAlignment="Stretch"
+                        VerticalContentAlignment="Stretch" />
+    </telerikPrimitives:RadModalWindow>
+  </Grid>
+</UserControl>

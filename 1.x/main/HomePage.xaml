@@ -1,0 +1,305 @@
+﻿<phone:PhoneApplicationPage 
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+	xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+	xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                            xmlns:models="clr-namespace:Awful.Models"
+                            xmlns:System="clr-namespace:System;assembly=mscorlib"
+							xmlns:menu="clr-namespace:Awful.Menus"
+                            xmlns:local="clr-namespace:Awful"
+							xmlns:commands="clr-namespace:Awful.Commands"
+                            xmlns:viewmodels="clr-namespace:Awful.ViewModels"
+                            xmlns:telerikCore="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Core"
+                            xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives"
+                            xmlns:telerikData="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Data"
+	mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
+	x:Class="Awful.HomePage"
+	telerikCore:InteractionEffectManager.IsInteractionEnabled="True"
+	FontFamily="{StaticResource PhoneFontFamilyNormal}"
+	FontSize="{StaticResource PhoneFontSizeNormal}"
+	Foreground="{StaticResource PhoneForegroundBrush}"
+	SupportedOrientations="Portrait" Orientation="Portrait"
+	shell:SystemTray.IsVisible="True">
+	<phone:PhoneApplicationPage.Resources>
+		<DataTemplate x:Key="ThreadsListItemTemplate">
+			<Border Margin="0,0,0,36">
+				<local:ThreadListing x:Name="ThreadListingItem"
+					Tag="{Binding}"
+					DataContext="{Binding}"/>
+			</Border>
+		</DataTemplate>
+		
+		<DataTemplate x:Key="ForumGroupHeaderTemplate">
+			<Grid Width="50"
+				Height="50">
+				<Grid.Background>
+					<SolidColorBrush Color="{StaticResource PhoneAccentColor}" />
+				</Grid.Background>
+				<TextBlock Margin="0"
+					TextWrapping="Wrap"
+					Text="{Binding Key}"
+					d:LayoutOverrides="Width, Height"
+					VerticalAlignment="Bottom"
+					HorizontalAlignment="Right" />
+			</Grid>
+		</DataTemplate>
+		
+		<commands:RemoveBookmarkCommand x:Key="RemoveBookmark"/>
+		<commands:ClearMarkedPostsCommand x:Key="ClearMarks"/>
+	</phone:PhoneApplicationPage.Resources>
+	
+	<phone:PhoneApplicationPage.ApplicationBar>
+		<shell:ApplicationBar BackgroundColor="{StaticResource PhoneBackgroundColor}" ForegroundColor="{StaticResource PhoneForegroundColor}">
+			<shell:ApplicationBar.MenuItems>
+				<shell:ApplicationBarMenuItem x:Name="NavigateToLinkMenu" Text="jump to thread..." Click="AppBarClick"/>
+				<shell:ApplicationBarMenuItem x:Name="NavigateToForumMenu" Text="jump to forum..." Click="AppBarClick"/>
+				<shell:ApplicationBarMenuItem x:Name="LogoutMenu" Text="logout..." Click="AppBarClick"/>
+			</shell:ApplicationBar.MenuItems>
+			<shell:ApplicationBarIconButton x:Name="RefreshButton" IconUri="/icons/appbar.refresh.rest.png" Text="refresh" Click="AppBarButtonClick"/>
+			<shell:ApplicationBarIconButton x:Name="SettingsButton" IconUri="/icons/appbar.feature.settings.rest.png" Text="settings" Click="AppBarButtonClick"/>
+		</shell:ApplicationBar>
+	</phone:PhoneApplicationPage.ApplicationBar>
+
+	<!--LayoutRoot is the root grid where all page content is placed-->
+	<Grid x:Name="LayoutRoot" Background="Transparent" d:DataContext="{StaticResource MainPageViewModel}">
+			
+			<Grid.Resources>
+				<local:ContextMenuProvider x:Key="FavoritesMenu">
+					<local:ContextMenuProvider.Menu>
+						<menu:FavoritesContextMenu FavoritesChanged="Forums_FavoritesChanged"/>
+					</local:ContextMenuProvider.Menu>
+				</local:ContextMenuProvider>
+			</Grid.Resources>
+			
+		<telerikPrimitives:RadBusyIndicator x:Name="busyIndicator" VerticalAlignment="Top" AnimationStyle="AnimationStyle3" Content=""/>
+
+		<!--Pivot Control-->
+		<controls:Pivot x:Name="MainMenu" Title="{StaticResource AppName}" SelectedIndex="{Binding CurrentSectionIndex, Mode=TwoWay}">
+			<!--Pivot item one-->
+			<controls:PivotItem x:Name="ForumsSection" Header="forums">
+				<Grid>  
+					<telerikPrimitives:RadBusyIndicator x:Name="ForumsSectionBusyIndicator"
+						Foreground="{StaticResource PhoneAccentBrush}"
+						HorizontalAlignment="Stretch"
+						VerticalAlignment="Stretch"
+						Canvas.ZIndex="10"
+						IsRunning="{Binding IsForumsLoading, Mode=OneWay}"/>
+															
+					<telerikData:RadJumpList x:Name="ForumsList"
+						ItemTemplate="{StaticResource MediumTitleTemplate}"
+						Opacity="{Binding IsForumsLoading, ConverterParameter=reverse, Converter={StaticResource BoolToOpacity}}"
+						SelectionChanged="ForumSelected"
+						IsPullToRefreshEnabled="True"
+            RefreshRequested="ForumsList_RefreshRequested"
+            IsStickyHeaderEnabled="True"
+						EmptyContent="tap here to load the forums."
+						ItemsSource="{Binding Forums}"
+						telerikPrimitives:RadContextMenu.ContextMenu="{Binding Menu, Source={StaticResource FavoritesMenu}}">
+            <telerikData:RadJumpList.EmptyContentTemplate>
+              <DataTemplate>
+                <Grid Tap="EmptyForumsList_Tap">
+                  <TextBlock Text="{Binding}"
+                             Style="{StaticResource PhoneTextTitle2Style}"
+                             FontFamily="Segoe WP Light"
+                             TextWrapping="Wrap"
+                             Margin="0,0,12,0">
+					<TextBlock.Foreground>
+						<SolidColorBrush Color="{StaticResource PhoneSubtleColor}" />
+					</TextBlock.Foreground>
+                  </TextBlock>
+                </Grid>
+              </DataTemplate>
+            </telerikData:RadJumpList.EmptyContentTemplate>      
+						<telerikData:RadJumpList.GroupHeaderTemplate>
+							<DataTemplate>
+								<Border BorderBrush="{StaticResource PhoneAccentBrush}" MinWidth="64" Height="64" HorizontalAlignment="Left" Margin="4" BorderThickness="2">
+									<TextBlock Foreground="{StaticResource PhoneAccentBrush}" FontSize="{StaticResource PhoneFontSizeExtraLarge}" FontFamily="{StaticResource PhoneFontFamilyLight}" Text="{Binding Key}" Margin="4,10,4,0" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+								</Border>
+							</DataTemplate>
+						</telerikData:RadJumpList.GroupHeaderTemplate>
+						<telerikData:RadJumpList.StickyHeaderTemplate>
+							<DataTemplate>
+								<Border BorderThickness="0" HorizontalAlignment="Stretch" Background="{StaticResource PhoneBackgroundBrush}" Padding="0, 0, 0, 8">
+									<Border VerticalAlignment="Top" BorderBrush="{StaticResource PhoneAccentBrush}" MinWidth="64" Height="64" HorizontalAlignment="Left" Margin="4, 4, 4, 4" BorderThickness="2">
+										<TextBlock Foreground="{StaticResource PhoneAccentBrush}" FontSize="{StaticResource PhoneFontSizeExtraLarge}" FontFamily="{StaticResource PhoneFontFamilyLight}" Text="{Binding Key}" Margin="4,10,4,0" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+									</Border>
+								</Border>
+							</DataTemplate>
+						</telerikData:RadJumpList.StickyHeaderTemplate>
+						<telerikData:RadJumpList.GroupPickerItemTemplateSelector>
+							<viewmodels:ForumGroupTemplateSelector Forums="{Binding Forums}">
+								<viewmodels:ForumGroupTemplateSelector.EmptyItemTemplate>
+									<DataTemplate>
+										<Border Background="{StaticResource PhoneChromeBrush}" MinWidth="96" Height="96" HorizontalAlignment="Left" Margin="4" BorderThickness="0" IsHitTestVisible="False">
+											<TextBlock FontSize="{StaticResource PhoneFontSizeExtraLarge}" FontFamily="{StaticResource PhoneFontFamilyLight}" Text="{Binding}" Margin="4,10,4,0" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+										</Border>
+									</DataTemplate>
+								</viewmodels:ForumGroupTemplateSelector.EmptyItemTemplate>
+								<viewmodels:ForumGroupTemplateSelector.LinkedItemTemplate>
+									<DataTemplate>
+										<Border Background="{StaticResource PhoneAccentBrush}" MinWidth="96" Height="96" HorizontalAlignment="Left" Margin="4" BorderThickness="0">
+											<TextBlock FontSize="{StaticResource PhoneFontSizeExtraLarge}" Foreground="{StaticResource PhoneForegroundBrush}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" Text="{Binding}" Margin="4,10,4,0" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+										</Border>
+									</DataTemplate>
+								</viewmodels:ForumGroupTemplateSelector.LinkedItemTemplate>
+							</viewmodels:ForumGroupTemplateSelector>
+						</telerikData:RadJumpList.GroupPickerItemTemplateSelector>                   
+						<telerikData:RadJumpList.GroupPickerItemsPanel>
+							<ItemsPanelTemplate>
+								<telerikPrimitives:RadWrapPanel Margin="8,30,0,0"/>
+							</ItemsPanelTemplate>
+						</telerikData:RadJumpList.GroupPickerItemsPanel>
+					</telerikData:RadJumpList>
+				</Grid>
+			</controls:PivotItem>
+
+ 			<!--Pivot item two-->
+			<controls:PivotItem x:Name="FavoritesSection" Header="favorites">
+				<Grid>	
+					<telerikPrimitives:RadBusyIndicator x:Name="FavoritesSectionBusyIndicator"
+						Foreground="{StaticResource PhoneAccentBrush}"
+						HorizontalAlignment="Stretch"
+						VerticalAlignment="Stretch"
+						Canvas.ZIndex="10"
+						Visibility="{Binding IsFavoritesLoading, Converter={StaticResource BoolToVisibility}}"
+						IsRunning="{Binding IsFavoritesLoading, Mode=OneWay}"/>
+
+          <telerikPrimitives:RadDataBoundListBox x:Name="FavoritesListBox"
+                                                 d:LayoutOverrides="Width, Height"
+                                                 Opacity="{Binding IsFavoritesLoading, ConverterParameter=reverse, Converter={StaticResource BoolToOpacity}}"
+                                                 ItemsSource="{Binding Favorites}"
+                                                 ItemTemplate="{StaticResource MediumTitleTemplate}"
+                                                 EmptyContent="Tap and hold a forum to add it to your favorites."
+                                                 EmptyContentDisplayMode="DataSourceEmpty"
+                                                 SelectionChanged="ForumSelected"
+                                                 HorizontalContentAlignment="Stretch"
+                                                 VerticalContentAlignment="Stretch"
+                                                 telerikPrimitives:RadContextMenu.ContextMenu="{Binding Menu, Source={StaticResource FavoritesMenu}}">
+            <telerikPrimitives:RadDataBoundListBox.EmptyContentTemplate>
+              <DataTemplate>
+                <Grid>
+                  <TextBlock Text="{Binding}"
+                             Style="{StaticResource PhoneTextTitle2Style}"
+                             FontFamily="Segoe WP Light"
+                             TextWrapping="Wrap"
+                             Margin="0,0,12,0">
+					<TextBlock.Foreground>
+						<SolidColorBrush Color="{StaticResource PhoneSubtleColor}" />
+					</TextBlock.Foreground>
+                  </TextBlock>
+                </Grid>
+              </DataTemplate>
+            </telerikPrimitives:RadDataBoundListBox.EmptyContentTemplate>
+          </telerikPrimitives:RadDataBoundListBox>
+
+        </Grid>
+			</controls:PivotItem>
+			<controls:PivotItem x:Name="BookmarksSection" Header="bookmarks">
+				<Grid x:Name="BookmarkSectionLayoutRoot">
+					<Grid.Resources>
+						<local:ContextMenuProvider x:Key="BookmarkMenu">
+							<local:ContextMenuProvider.Menu>
+								<menu:BookmarksContextMenu JumpToPageRequest="Bookmarks_JumpToPage" />
+							</local:ContextMenuProvider.Menu>
+						</local:ContextMenuProvider>
+					</Grid.Resources>
+					<telerikPrimitives:RadBusyIndicator x:Name="BookmarkSectionBusyIndicator" 
+						Foreground="{StaticResource PhoneAccentBrush}"
+						Canvas.ZIndex="10"
+						HorizontalAlignment="Stretch"
+						VerticalAlignment="Stretch"
+						IsRunning="{Binding IsBookmarksLoading, Mode=OneWay}"
+						Visibility="{Binding IsBookmarksLoading, Converter={StaticResource BoolToVisibility}}"/>
+
+          <telerikPrimitives:RadDataBoundListBox IsCheckModeEnabled="False"
+                                                 x:Name="BookmarksList"
+                                                 IsPullToRefreshEnabled="True"
+                                                 RefreshRequested="BookmarksList_RefreshRequested"
+                                                 Opacity="{Binding IsBookmarksLoading, ConverterParameter=reverse, Converter={StaticResource BoolToOpacity}}"
+                                                 ItemsSource="{Binding Bookmarks}"
+                                                 ItemTemplate="{StaticResource ThreadsListItemTemplate}"
+                                                 EmptyContent="Threads you've bookmarked will be displayed here. Tap here to refresh."
+                                                 EmptyContentDisplayMode="DataSourceEmpty"
+                                                 SelectionChanged="ThreadSelected"
+                                                 telerikPrimitives:RadContextMenu.ContextMenu="{Binding Menu, Source={StaticResource BookmarkMenu}}">
+            <telerikPrimitives:RadDataBoundListBox.EmptyContentTemplate>
+              <DataTemplate>
+                <Grid Tap="EmptyBookmarks_Tap">
+                  <TextBlock Text="{Binding}"
+                             Style="{StaticResource PhoneTextTitle2Style}"
+                             FontFamily="Segoe WP Light"
+                             TextWrapping="Wrap"
+                             Margin="0,0,12,0">
+					<TextBlock.Foreground>
+						<SolidColorBrush Color="{StaticResource PhoneSubtleColor}" />
+					</TextBlock.Foreground>
+                  </TextBlock>
+                </Grid>
+              </DataTemplate>
+            </telerikPrimitives:RadDataBoundListBox.EmptyContentTemplate>
+          </telerikPrimitives:RadDataBoundListBox>
+
+            <telerikPrimitives:RadModalWindow x:Name="ThreadNavigatorWindow"
+						VerticalAlignment="Top"
+						Placement="TopCenter"
+						HorizontalContentAlignment="Stretch"
+						VerticalContentAlignment="Top" WindowSizeMode="FitToPlacementTarget" PlacementTarget="{Binding ElementName=LayoutRoot}">
+
+						<local:ThreadNavigatorPanel x:Name="ThreadNavigator"
+							HorizontalContentAlignment="Stretch" VerticalAlignment="Top" />
+					</telerikPrimitives:RadModalWindow>
+				</Grid>
+			</controls:PivotItem>
+		</controls:Pivot>
+		<telerikPrimitives:RadModalWindow x:Name="ThreadUrlNavigator" VerticalAlignment="Top" MinWidth="100" WindowSizeMode="FitToPlacementTarget" PlacementTarget="{Binding ElementName=LayoutRoot}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top">
+			<Grid>
+				<Grid.Background>
+					<SolidColorBrush Color="{StaticResource PhoneChromeColor}"/>
+				</Grid.Background>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<StackPanel Orientation="Vertical" Grid.ColumnSpan="2">
+					<TextBlock x:Name="ThreadUrlLabel" TextWrapping="Wrap" Text="enter thread url or id:" Style="{StaticResource PhoneTextSubtleStyle}"/>
+					<TextBox x:Name="UrlTextBox" Margin="0" TextWrapping="Wrap" InputScope="Text" d:LayoutOverrides="VerticalAlignment"/>
+				</StackPanel>
+				<Button x:Name="UrlOkButton" Content="ok" Margin="0,0,1,0" Grid.Row="1" Click="NavigatorButton_Click" Tag="URLOK"/>
+				<Button x:Name="UrlCancelButton" Content="cancel" Grid.Column="1" Margin="0" Grid.Row="1" Click="NavigatorButton_Click" Tag="URLCANCEL"/>
+			</Grid>
+		</telerikPrimitives:RadModalWindow>
+		<telerikPrimitives:RadModalWindow x:Name="ForumIDNavigator" VerticalAlignment="Top" MinWidth="100" WindowSizeMode="FitToPlacementTarget" PlacementTarget="{Binding ElementName=LayoutRoot}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top">
+			<Grid>
+				<Grid.Background>
+					<SolidColorBrush Color="{StaticResource PhoneChromeColor}"/>
+				</Grid.Background>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<StackPanel Grid.ColumnSpan="2" Margin="0,0,0,-0.305" Orientation="Vertical" d:LayoutOverrides="Height">
+					<TextBlock x:Name="ForumIDLabel" TextWrapping="Wrap" Text="enter forum id:" Style="{StaticResource PhoneTextSubtleStyle}"/>
+					<TextBox x:Name="ForumTextBox" Margin="0" TextWrapping="Wrap" InputScope="Number"/>
+				</StackPanel>
+				<Button x:Name="ForumOkButton" Content="ok" Margin="0,0,1,0" Grid.Row="1" Click="NavigatorButton_Click" Tag="FORUMNAVOK"/>
+				<Button x:Name="ForumCancelButton" Content="cancel" Grid.Column="1" Margin="0" Grid.Row="1" Click="NavigatorButton_Click" Tag="FORUMNAVCANCEL"/>
+			</Grid>
+		</telerikPrimitives:RadModalWindow>
+		<telerikPrimitives:RadWindow x:Name="AboutWindow" Margin="0" Grid.Row="1" IsFullScreen="True">
+			<local:AboutPanel x:Name="AboutPanel" EmailAuthorRequested="AboutPanel_EmailAuthorRequested"
+				AppThreadRequested="AboutPanel_AppThreadRequested"/>
+		</telerikPrimitives:RadWindow>
+	</Grid>
+</phone:PhoneApplicationPage>

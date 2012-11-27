@@ -1,0 +1,83 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Awful_ViewModels="clr-namespace:Awful.ViewModels"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+             mc:Ignorable="d"
+             x:Class="Awful.ThreadListing"
+             d:DesignWidth="671"
+             d:DesignHeight="400">
+  
+    <Grid x:Name="LayoutRoot"
+          Background="Transparent" d:DataContext="{Binding Source={StaticResource sampleThread}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="ThreadLabel"
+                   Text="{Binding ThreadTitle}"
+                   TextWrapping="Wrap"
+                   MaxHeight="175"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Style="{StaticResource PhoneTextTitle3Style}" 
+				   Foreground="{StaticResource PhoneForegroundBrush}"
+				   Opacity="{Binding HasViewedToday, ConverterParameter=VIEWED, Converter={StaticResource ThreadFormatter}}"/>
+        <StackPanel HorizontalAlignment="Left"
+                    Margin="12,6,0,0"
+                    Orientation="Vertical"
+                    Grid.Row="1"
+                    d:LayoutOverrides="Height">
+            <StackPanel x:Name="AuthorPanel"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Top"
+                        d:LayoutOverrides="Width">
+                <TextBlock x:Name="ByText"
+                           TextWrapping="Wrap"
+                           Text="by"
+                           Style="{StaticResource PhoneTextSubtleStyle}"
+                           Margin="0,0,6,0"
+                           Opacity="0.85">
+					<TextBlock.Foreground>
+						<SolidColorBrush Color="{Binding CurrentTheme.Foreground, Source={StaticResource LookAndFeel}}" />
+					</TextBlock.Foreground>
+                </TextBlock>
+                <TextBlock x:Name="AuthorLabel"
+                           TextWrapping="Wrap"
+                           Text="{Binding AuthorName}"
+                           Style="{StaticResource PhoneTextSubtleStyle}"
+                           Margin="0"
+                           Opacity="0.85">
+					<TextBlock.Foreground>
+						<SolidColorBrush Color="{Binding CurrentTheme.Foreground, Source={StaticResource LookAndFeel}}" />
+					</TextBlock.Foreground>
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,5,0,0"
+                        Visibility="{Binding ShowPostCount, Converter={StaticResource BoolToVisibility}}">
+                <TextBlock x:Name="PostCountValue"
+                           TextWrapping="Wrap"
+                           Text="{Binding ConverterParameter=COUNT, Converter={StaticResource ThreadFormatter}}"
+                           Style="{StaticResource PhoneTextAccentStyle}"
+                           Margin="0"
+                           d:LayoutOverrides="Width">
+					<TextBlock.Foreground>
+						<SolidColorBrush Color="{Binding CurrentTheme.PostHasSeen, Source={StaticResource LookAndFeel}}" />
+					</TextBlock.Foreground>
+                </TextBlock>
+                <TextBlock x:Name="PostCountLabel"
+                           TextWrapping="Wrap"
+                           Text="new posts"
+                           Margin="5,0,0,0"
+                           Style="{StaticResource PhoneTextAccentStyle}">
+                		<TextBlock.Foreground>
+						<SolidColorBrush Color="{Binding CurrentTheme.PostHasSeen, Source={StaticResource LookAndFeel}}" />
+					</TextBlock.Foreground>       
+						   </TextBlock>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
