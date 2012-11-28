@@ -14,3 +14,5 @@ packages/
 # design and marketplace assets
 design/
 marketplace/
+# private 3rd-party library folder
+lib/private/

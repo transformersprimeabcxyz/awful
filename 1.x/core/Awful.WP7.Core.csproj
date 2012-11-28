@@ -47,9 +47,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\main\packages\HtmlAgilityPack.1.4.6\lib\sl4-windowsphone71\HtmlAgilityPack.dll</HintPath>
     </Reference>
-    <Reference Include="KollaSoft.WP7, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\main\lib\KollaSoft.WP7.dll</HintPath>
+    <Reference Include="KollaSoft.WP7">
+      <HintPath>..\..\lib\KollaSoft.WP7.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone" />
     <Reference Include="system.data.linq" />

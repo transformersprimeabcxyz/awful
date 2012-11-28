@@ -75,6 +75,7 @@ namespace Awful.Models
         [Association(Storage = "_Subforum", ThisKey = "SubforumID", OtherKey = "ID", IsForeignKey = true)]
         public Subforum Subforum
         {
+            // TODO: this line throws a disposed object error on save (exiting app or sending to background).
             get { return this._Subforum.Entity; }
             set
             {
